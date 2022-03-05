@@ -1,19 +1,25 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Kons Construction Html Template</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="" />
-<meta name="keywords" content="" />
-<link rel="stylesheet" type="text/css" href="css/animate.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
-<link rel="stylesheet" type="text/css" href="css/dark-color.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/responsive.css">
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<title>Kons Construction Html Template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'revolution/css/navigation.css' %}">
+		<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/ionicons.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'lib/slick/slick.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'lib/slick/slick-theme.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/dark-color.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+		</head>
 
 <body>
 
@@ -50,7 +56,7 @@
 								</li>
 								<li><a class="active" href="#" title="">Works</a>
 									<ul>
-										<li><a href="works-grid.html" title="">Work Grid</a></li>
+										<li><a href="{% url 'works' %}" title="">Work Grid</a></li>
 										<li><a href="work-masonary.html" title="">Work Masonary</a></li>
 										<li><a href="works-parallax.html" title="">Works Parallax</a></li>
 										<li><a href="project-details.html" title="">Project Details</a></li>
@@ -58,7 +64,7 @@
 								</li>
 								<li><a href="#" title="">News</a>
 									<ul>
-										<li><a href="news-grid.html" title="">News Grid</a></li>
+										<li><a href="{% url 'news' %}" title="">News Grid</a></li>
 										<li><a href="news-listing.html" title="">News Listing</a></li>
 										<li><a href="news-sidebar.html" title="">News Sidebar</a></li>
 									</ul>
@@ -73,8 +79,8 @@
 										<li><a href="single-video.html" title="">Single Video</a></li>
 									</ul>
 								</li>
-								<li><a href="about.html" title="">About</a></li>
-								<li><a href="contact.html" title="">Contact</a></li>
+								<li><a href="{% url 'about' %}" title="">About</a></li>
+								<li><a href="{% url 'contact' %}" title="">Contact</a></li>
 							</ul>
 						</nav><!--nav end-->
 						<div class="mobile-menu-btn">
@@ -105,7 +111,7 @@
 				</li>
 				<li><a href="#" title="">Works</a>
 					<ul>
-						<li><a href="works-grid.html" title="">Work Grid</a></li>
+						<li><a href="{% url 'works' %}" title="">Work Grid</a></li>
 						<li><a href="work-masonary.html" title="">Work Masonary</a></li>
 						<li><a href="works-parallax.html" title="">Works Parallax</a></li>
 						<li><a href="project-details.html" title="">Project Details</a></li>
@@ -113,7 +119,7 @@
 				</li>
 				<li><a href="#" title="">News</a>
 					<ul>
-						<li><a href="news-grid.html" title="">News Grid</a></li>
+						<li><a href="{% url 'news' %}" title="">News Grid</a></li>
 						<li><a href="news-listing.html" title="">News Listing</a></li>
 						<li><a href="news-sidebar.html" title="">News Sidebar</a></li>
 					</ul>
@@ -128,8 +134,8 @@
 						<li><a href="single-video.html" title="">Single Video</a></li>
 					</ul>
 				</li>
-				<li><a href="about.html" title="">About</a></li>
-				<li><a href="contact.html" title="">Contact</a></li>
+				<li><a href="{% url 'about' %}" title="">About</a></li>
+				<li><a href="{% url 'contact' %}" title="">Contact</a></li>
 			</ul>
 		</div><!--responsive-mobile-menu end-->
 
@@ -298,12 +304,12 @@
 
 
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/popper.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/isotope.js"></script>
-<script type="text/javascript" src="js/html5lightbox.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/popper.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/isotope.js"></script>
+<script type="text/javascript" src="/static/js/html5lightbox.js"></script>
+<script type="text/javascript" src="/static/js/script.js"></script>
 </body>
 
 </html>
