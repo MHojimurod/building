@@ -2,15 +2,30 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    return render(request, 'main/index.html')
+    ctx = {
+        "home":"active"
+    }
+    return render(request, 'main/index.html',ctx)
 
 
 def contact(request):
-    return render(request, 'main/contact.html')
+    ctx = {
+        "contact":"active"
+    }
+    return render(request, 'main/contact.html',ctx)
 
 def about(request):
-    return render(request, 'main/about.html')
+    ctx = {
+        "about":"active"
+    }
+    return render(request, 'main/about.html',ctx)
 def news(request):
-    return render(request, 'main/news-grid.html')
+    ctx = {
+        "news":"active"
+    }
+    return render(request, 'main/news-grid.html',ctx)
 def works(request):
-    return render(request, 'main/works-grid.html')
+    ctx = {
+        "works":"active"
+    }
+    return render(request, 'main/works-grid.html',ctx)
