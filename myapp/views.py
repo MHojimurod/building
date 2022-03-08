@@ -1,6 +1,6 @@
 from unicodedata import name
 from django.shortcuts import redirect, render
-from .models import ContactForm
+from .models import Category, ContactForm, OurWorks
 from django.contrib import messages
 
 # Create your views here.
@@ -42,7 +42,11 @@ def news(request):
     }
     return render(request, 'main/news-grid.html',ctx)
 def works(request):
+    projects = OurWorks.objects.all()
+    categories = Category.objects.all()
     ctx = {
-        "works":"active"
+        "works":"active",
+        "projects": projects,
+        "categories": categories,
     }
     return render(request, 'main/works-grid.html',ctx)

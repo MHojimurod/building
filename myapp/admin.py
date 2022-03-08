@@ -1,5 +1,23 @@
 from django.contrib import admin
 
-from myapp.models import ContactForm
+from myapp.models import Category, ContactForm, News, OurWorks
 
-admin.site.register(ContactForm)
+@admin.register(ContactForm)
+class ContactFormAdmin(admin.ModelAdmin):
+    list_display = ("name", "email", "created_at")
+
+
+@admin.register(News)
+class NewsmAdmin(admin.ModelAdmin):
+    list_display = ("title", "description", "created_at",)
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ("title",)
+
+
+@admin.register(OurWorks)
+class OurWorksAdmin(admin.ModelAdmin):
+    list_display = ("title", "category", "created_at")
+    
