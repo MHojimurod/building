@@ -1,7 +1,6 @@
 from distutils.command.upload import upload
 from django.db import models
 
-<<<<<<< HEAD
 # Create your models here.
 
 
@@ -27,6 +26,3 @@ class ContactForm(models.Model):
 class OurWorks(models.Model):
     title = models.CharField(max_length=200,verbose_name="Nomi")
     photo = models.ImageField(verbose_name="Rasmi",upload_to="images/")
-=======
-
->>>>>>> 15d385e77a3d991913280f190f50fa95cc58daf1

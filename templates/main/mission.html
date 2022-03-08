@@ -1,0 +1,139 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<!-- <div class="responsive-mobile-menu">
+			<a href="#" title="" class="close-menu"><i class="ion-close"></i></a>
+			<ul>
+				<li><a href="#" title="">Asosiy</a>
+					<ul>
+						<li><a href="index.html" title="">Homepage 1</a></li>
+						<li><a href="index2.html" title="">Homepage 2</a></li>
+						<li><a href="index3.html" title="">Homepage 3</a></li>
+					</ul>
+				</li>
+				<li><a href="#" title="">Ishlarimiz</a>
+					<ul>
+						<li><a href="{% url 'works' %}" title="">Work Grid</a></li>
+						<li><a href="work-masonary.html" title="">Work Masonary</a></li>
+						<li><a href="works-parallax.html" title="">Works Parallax</a></li>
+						<li><a href="project-details.html" title="">Project Details</a></li>
+					</ul>
+				</li>
+				<li><a href="#" title="">YAngiliklar</a>
+					<ul>
+						<li><a href="{% url 'news' %}" title="">News Grid</a></li>
+						<li><a href="news-listing.html" title="">News Listing</a></li>
+						<li><a href="news-sidebar.html" title="">News Sidebar</a></li>
+					</ul>
+				</li>
+				<li><a href="#" title="">Blog</a>
+					<ul>
+						<li><a href="single-post.html" title="">Single Post</a>
+							<ul>
+								<li><a href="single-post-gallery.html" title="">Single Post Gallery</a></li>
+							</ul>
+						</li>
+						<li><a href="single-video.html" title="">Single Video</a></li>
+					</ul>
+				</li>
+				<li><a href="{% url 'about' %}" title="">Biz Haqimizda</a></li>
+				<li><a href="{% url 'contact' %}" title="">Aloqa</a></li>
+			</ul>
+		</div> -->
+
+<section>
+  <div class="block3 mt-5">
+    <div class="container">
+      <div class="our-info-details">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="our-info">
+				<img src="/static/images/info-pic.png" alt="">
+				<h2>10 yillik<br />Tajriba </h2>
+				<p>Insonlarga eng yaxshi yechimni topishda yordam beramiz.</p>
+			</div>
+          </div>
+          <div class="col-lg-8">
+            <div class="who-we-are">
+              <h3 style="color: #ffa800;" class="sm-title">Missiya va qadriyatlar</h3>
+              <p style="color: #fff">
+                Biz nima sababdan o’z kasbimizni sevamiz?<br /><br />
+              </p>
+              <br /><br />
+              <div class="our-features">
+                <div class="feature-icon">
+                  <i class="fa fa-industry" aria-hidden="true"></i>
+                </div>
+                <!--feature-icon end-->
+                <div class="feature-info">
+                  <h3>Kasbiy missiyamiz</h3>
+                  <p>
+                    Albatta, foyda bu har qanday biznes uchun muhim muvaffaqiyat
+                    omili hisoblanadi. Ammo bundan mustasno bo’lgan, bizni ulkan
+                    marralar sari yetaklovchi yanada muhimroq maqsadlar bor,
+                    bular:<br />
+
+                    - Mamlakatimiz va umuman olamni chiroyli va ko’rkam binolar
+                    bilan, bog’lar va uylar bilan bezatish; <br />
+                    - Insonlarni qulay, mustahkam uylar va idoda binolari bilan
+                    taminlash orqali baxtni yanada ortirish; <br />
+                    - Atrofimizdagilar bilan o’z professional tajribamiz bilan
+                    bo’lishish va ularga munosib namuna bo’lish;
+                  </p>
+                </div>
+                <!--feature-info end-->
+              </div>
+              <!--our-features end-->
+              <div class="our-features">
+                <div class="feature-icon">
+                  <i class="fa fa-building-o" aria-hidden="true"></i>
+                </div>
+                <!--feature-icon end-->
+                <div class="feature-info">
+                  <h3>Ijtimoiy missiyamiz</h3>
+                  <p>
+                    - Insonlarga hayotda o’z yo’lini topishda ko’maklashish,
+                    ijtimoiy loyihalarni qo’llab quvatlashga doimo tayyormiz;<br />
+                    - Insonlarni yanada ko’proq yutiqlarga erishishi
+                    tarafdorimiz, chunki bizning muvaffaqiyatimiz aynan jamiyat
+                    muvaffaqiyatiga uzviy bog’likligiga ishonamiz; <br />
+                    - Ma’rifiy, sog’likni saqlash va boshqa ijtimoiy loyihalarni
+                    amalga oshirishda ishtiyoq bilan yondashamiz;
+                  </p>
+                </div>
+                <!--feature-info end-->
+              </div>
+              <!--our-features end-->
+              <div class="our-features">
+                <div class="feature-icon">
+                  <i class="fa fa-xing" aria-hidden="true"></i>
+                </div>
+                <!--feature-icon end-->
+                <div class="feature-info">
+                  <h3>Qadriyatlar</h3>
+                  <p>
+                    - Adolatli almashinuv – doimiy muvaffaqiyat garovi;<br />
+                    - Insonlar, siz bilan qanday munosabatda bo’lishini
+                    xohlasangiz, siz ham ular bilan huddi shunday munosabatda
+                    bo’ling;<br />
+                    - Boshqa insonlarning tashvishi bilan yashayotgan shaxs (yoki
+                    kompaniya), muvaffaqiyatga erishishda boshqalarni nisbatan
+                    imkoniyatini ko’proq bo’lin, o’ziga eng ijobiy narsalarni
+                    jalb qiladi;<br>
+					- Halol mehnat baxt keltirar; Va boshqa ko’plab
+                    qadriyatlarga rioya qilishga harakat qilamiz.
+                  </p>
+                </div>
+                <!--feature-info end-->
+              </div>
+              <!--our-features end-->
+            </div>
+            <!--who-we-are end-->
+          </div>
+        </div>
+      </div>
+      <!--our-info3 end-->
+    </div>
+  </div>
+</section>
+
+{% endblock %}

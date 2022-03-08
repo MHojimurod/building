@@ -29,3 +29,14 @@ def works(request):
         "works":"active"
     }
     return render(request, 'main/works-grid.html',ctx)
+
+
+def about_company(request):
+    return render(request, 'main/index3.html')
+
+def mission(request):
+    return render(request, 'main/mission.html')
+
+    
+def why_this_company(request):
+    return render(request, 'main/mission.html')
