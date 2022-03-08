@@ -162,10 +162,9 @@
 							<div class="option-isotop">
 								<ul id="filter" class="option-set filters-nav" data-option-key="filter">
 									<li><a class="selected" data-option-value="*">All</a></li>
-									<li><a data-option-value=".residentials">Residentials</a></li>
-									<li><a data-option-value=".commercials">commercials</a></li>
-									<li><a data-option-value=".buildings">Buildings</a></li>
-									<li><a data-option-value=".industrials">Industrials</a></li>
+									{% for i in categories %}
+									<li><a data-option-value=".{{i.id}}">{{i.title}}</a></li>
+									{% endfor %}
 								</ul>
 							</div>
 						</section>
@@ -173,7 +172,7 @@
 							<div class="row">
 								<div class="masonary style2">
 									{% for project in projects %}
-									<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 residentials">
+									<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 {{project.category.id}}">
 										<div class="portfolio-item">
 											<div class="pt-img">
 												<img style="width: 350px; height: 280px;" src="{{project.photo.url}}" alt="">

@@ -15,12 +15,11 @@
                             </ul>
                         </li>
                         <li><a class="{{works}}" href="{% url 'works' %}" title="">Loyihalar</a>
-                            <!-- <ul>
-                                <li><a href="" title="">Work Grid</a></li>
-                                <li><a href="work-masonary.html" title="">Work Masonary</a></li>
-                                <li><a href="works-parallax.html" title="">Works Parallax</a></li>
-                                <li><a href="project-details.html" title="">Project Details</a></li>
-                            </ul> -->
+                            <ul>
+                                {% for i in projects %}
+                                <li><a href="" title="">{{i.title}}</a></li>
+                                {% endfor %}
+                            </ul>
                         </li>
                         <li><a class="{{news}}" href="{% url 'news' %}" title="">Yangiliklar</a>
                             <!-- <ul>
