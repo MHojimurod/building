@@ -15,8 +15,11 @@ class ContactForm(models.Model):
     name = models.CharField(max_length=100,verbose_name="Ismi")
     email = models.EmailField(verbose_name="Email")
     subject = models.CharField(max_length=200,verbose_name="Mavzu")
-    message = models.TextField(verbose_name="Xabar")
+    description = models.TextField(verbose_name="Xabar")
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return self.name
 
 
 

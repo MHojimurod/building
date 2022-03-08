@@ -48,7 +48,6 @@
 			<li><a href="{% url 'contact' %}" title="">Aloqa</a></li>
 		</ul>
 	</div><!--responsive-mobile-menu end-->
-
 	<section>
 		<div class="block no-padding">
 			<div class="main-map">
@@ -56,6 +55,7 @@
 			</div><!--main-map end-->
 		</div>
 	</section>
+	{% include 'messages.html' %}
 
 
 	<section>
@@ -97,11 +97,12 @@
 					<h3>Savolingiz bormi? Biz bilan bog'laning</h3>
 					<p class="success alert alert-success" id="success" style="display:none;"></p>
 					<p class="error alert alert-danger" id="error" style="display:none;"></p>
-					<form name="contact_form_3" id="contact_form_3" method="post">
+					<form action="{% url 'contact' %}" name="contact_form_3" id="contact_form_3" method="POST">
+						{% csrf_token %}
 						<input type="hidden" name="axn" value="contact_3">
 						<div class="row">
 							<div class="col-lg-4">
-								<input type="text" name="username" id="username" placeholder="Ism*">
+								<input type="text" name="name" id="username" placeholder="Ism*">
 							</div>
 							<div class="col-lg-4">
 								<input type="text" name="email" id="email" placeholder="Email*">
@@ -113,7 +114,7 @@
 								<textarea name="description" id="description" placeholder="Xabar"></textarea>
 							</div>
 							<div class="col-lg-12 text-center">
-								<button type="button" id="submit_3">Yuborish</button>
+								<button type="submit" id="submit_3">Yuborish</button>
 							</div>
 						</div>
 					</form>
