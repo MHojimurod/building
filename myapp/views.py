@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from unicodedata import name
+from django.shortcuts import redirect, render
+from .models import ContactForm
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -9,6 +12,20 @@ def home(request):
 
 
 def contact(request):
+    if request.method == "POST":
+        name = request.POST["name"]
+        email = request.POST["email"]
+        subject = request.POST["subject"]
+        description = request.POST["description"]
+        contact = ContactForm.objects.create(
+            name=name,
+            email=email,
+            subject=subject,
+            description=description
+        )
+        contact.save()
+        messages.success(request, "Rahmat qabul qilindi. Biz sizga tez orada aloqaga chiqamiz !")
+        return redirect("contact")
     ctx = {
         "contact":"active"
     }
