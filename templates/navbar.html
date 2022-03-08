@@ -3,18 +3,18 @@
         <div class="container">
             <div class="header-bar">
                 <div class="logo">
-                    <a href="#" title=""><img src="images/logo.png" alt=""></a>
+                    <a href="\" title=""><img style="width:74px;" src="/static/images/logo.png" alt=""></a>
                 </div><!--logo end-->
                 <nav>
                     <ul>
-                        <li><a href="\" title="">Kompaniya Haqid</a>
+                        <li><a href="\" title="">Kompaniya Haqida</a>
                             <ul>
-                                <li><a href="index.html" title="">Kompaniya Haqid   </a></li>
-                                <li><a href="index2.html" title="">Homepage 2</a></li>
-                                <li><a href="index3.html" title="">Homepage 3</a></li>
+                                <li><a href="{% url 'about_company' %}" title="">Kompaniya Haqida</a></li>
+                                <li><a href="{% url 'mission' %}" title="">Missiya va qadriyatlar</a></li>
+                                <li><a href="{% url 'about' %}" title="">Nega aynan From Zero</a></li>
                             </ul>
                         </li>
-                        <li><a class="{{works}}" href="{% url 'works' %}" title="">Ishlarimiz</a>
+                        <li><a class="{{works}}" href="{% url 'works' %}" title="">Loyihalar</a>
                             <!-- <ul>
                                 <li><a href="" title="">Work Grid</a></li>
                                 <li><a href="work-masonary.html" title="">Work Masonary</a></li>
@@ -39,8 +39,8 @@
                                 <li><a href="single-video.html" title="">Single Video</a></li>
                             </ul>
                         </li> -->
-                        <li><a class="{{about}}" href="{% url 'about' %}" title="">Biz Haqimizda</a></li>
-                        <li><a class="{{contact}}" href="{% url 'contact' %}" title="">Aloqa</a></li>
+                        <!-- <li><a class="{{about}}" href="{% url 'about' %}" title="">Biz Haqimizda</a></li> -->
+                        <li><a class="{{contact}}" href="{% url 'contact' %}" title="">Aloqa uchun</a></li>
                     </ul>
                 </nav><!--nav end-->
                 <div class="mobile-menu-btn">
