@@ -64,3 +64,12 @@ def mission(request):
     
 def why_this_company(request):
     return render(request, 'main/mission.html')
+
+
+
+def work_details(request,pk):
+    project = OurWorks.objects.get(pk=pk)
+    ctx = {
+        "project": project
+    }
+    return render(request, 'main/work-details.html',ctx)
