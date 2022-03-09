@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from myapp.models import Category, ContactForm, News, OurWorks
+from myapp.models import Category, ContactForm, News, OurWorks, Partner
 
 @admin.register(ContactForm)
 class ContactFormAdmin(admin.ModelAdmin):
@@ -20,4 +20,10 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(OurWorks)
 class OurWorksAdmin(admin.ModelAdmin):
     list_display = ("title", "category", "created_at")
+
+
+@admin.register(Partner)
+class PartnerAdmin(admin.ModelAdmin):
+    list_display = ("full_name", "short_description", "phone")
+    
     

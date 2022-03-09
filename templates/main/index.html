@@ -273,105 +273,21 @@
 			</div><!--title-sm end-->
 			<div class="house-imgs-slides style2 no-pd">
 				<div class="house-slider style2">
+					{% for i in our_works %}
 					<div class="house-slide">
-						<img src="http://via.placeholder.com/1920x1000" alt="">
+						<img src="{{ i.photo.url }}" alt="" height="700">
 						<div class="hs-info">
 							<div class="container">
-								<h3>Mercedes-Benz Musem</h3>
-								<a href="#" title="">View Project <i class="fa fa-angle-right"></i></a>
+								<h3>{{ i.title }}</h3>
+								<a href="#" title="">View Project <i class="bi bi-chevron-double-right"></i></a>
 							</div>
 						</div><!--hs-info end-->
 					</div><!--house-slide end-->
-					<div class="house-slide">
-						<img src="http://via.placeholder.com/1920x1000" alt="">
-						<div class="hs-info">
-							<div class="container">
-								<h3>Mercedes Musem</h3>
-								<a href="#" title="">View Project <i class="fa fa-angle-right"></i></a>
-							</div>
-						</div><!--hs-info end-->
-					</div><!--house-slide end-->
-					<div class="house-slide">
-						<img src="http://via.placeholder.com/1920x1000" alt="">
-						<div class="hs-info">
-							<div class="container">
-								<h3>Musem</h3>
-								<a href="#" title="">View Project <i class="fa fa-angle-right"></i></a>
-							</div>
-						</div><!--hs-info end-->
-					</div><!--house-slide end-->
+					{% endfor %}
 				</div><!--house-slider end-->
 			</div><!--house-imgs-slides end-->
 		</div>
 	</section>
-
-	<section>
-		<div class="block remove-btm-gap">
-			<div class="container">
-				<div class="title-sm style2">
-					<h3>Yangiliklarr</h3>
-					<a href="#" title="">Barcha maqolalarni ko'rish</a>
-				</div><!--title-sm end-->
-				<div class="trending-stories">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="tr-news">
-								<div class="tr-news-img">
-									<img src="http://via.placeholder.com/200x270" alt="">
-								</div><!--tr-news-img end-->
-								<div class="treding-new">
-									<h5>Ilhom</h5>
-									<h3><a href="#" title="">Shanxay, Xitoyning eng noyob 10 ta arxitektura binolari</a></h3>
-									<p>Lorem ipsum dolor sit amet, solo consectetur adipiscing elit. Phasellus til faucibus est sed facilisis viverra satanil...</p>
-									<span>Aug 05th, 2017 by <a href="#">Ron Weasley</a></span>
-								</div><!--treding-new end-->
-							</div><!--tr-news end-->
-						</div>
-						<div class="col-lg-6">
-							<div class="tr-news">
-								<div class="tr-news-img">
-									<img src="http://via.placeholder.com/200x270" alt="">
-								</div><!--tr-news-img end-->
-								<div class="treding-new">
-									<h5>Biznes</h5>
-									<h3><a href="#" title="">Marokash savdo markazi SONS Co.</a></h3>
-									<p>Lorem ipsum dolor sit amet, solo consectetur adipiscing elit. Phasellus til faucibus est sed facilisis viverra satanil...</p>
-									<span>Aug 05th, 2017 by <a href="#">Admin</a></span>
-								</div><!--treding-new end-->
-							</div><!--tr-news end-->
-						</div>
-						<div class="col-lg-6">
-							<div class="tr-news">
-								<div class="tr-news-img">
-									<img src="http://via.placeholder.com/200x270" alt="">
-								</div><!--tr-news-img end-->
-								<div class="treding-new">
-									<h5>Jamiyat</h5>
-									<h3><a href="#" title="">Akao's Coffee Bar, Italiya AMMA mukofoti 2017 g'olibi</a></h3>
-									<p>Lorem ipsum dolor sit amet, solo consectetur adipiscing elit. Phasellus til faucibus est sed facilisis viverra satanil...</p>
-									<span>Aug 05th, 2017 by <a href="#">Admin</a></span>
-								</div><!--treding-new end-->
-							</div><!--tr-news end-->
-						</div>
-						<div class="col-lg-6">
-							<div class="tr-news">
-								<div class="tr-news-img">
-									<img src="http://via.placeholder.com/200x270" alt="">
-								</div><!--tr-news-img end-->
-								<div class="treding-new">
-									<h5>Texnologiya</h5>
-									<h3><a href="#" title="">Germaniyaning NAH Parkidan yog'och tuzilishini o'rganing</a></h3>
-									<p>Lorem ipsum dolor sit amet, solo consectetur adipiscing elit. Phasellus til faucibus est sed facilisis viverra satanil...</p>
-									<span>Aug 05th, 2017 by <a href="#">Admin</a></span>
-								</div><!--treding-new end-->
-							</div><!--tr-news end-->
-						</div>
-					</div>
-				</div><!--trending-stories end-->
-			</div>
-		</div>
-	</section>
-
 
 
 	<section>
@@ -380,20 +296,12 @@
 				<div class="partners-section style2">
 					<div class="container">
 						<div class="title-sm ta-left">
-							<h3>our clients</h3>
+							<h3>Bizning Partnerlar</h3>
 						</div><!--title end-->
 						<ul class="partner-carousel">
-							<li><a href="#" title=""><img src="http://via.placeholder.com/140x71" alt=""></a></li>
-							<li><a href="#" title=""><img src="http://via.placeholder.com/150x71" alt=""></a></li>
-							<li><a href="#" title=""><img src="http://via.placeholder.com/105x71" alt=""></a></li>
-							<li><a href="#" title=""><img src="http://via.placeholder.com/95x71" alt=""></a></li>
-							<li><a href="#" title=""><img src="http://via.placeholder.com/128x71" alt=""></a></li>
-							<li><a href="#" title=""><img src="http://via.placeholder.com/140x71" alt=""></a></li>
-							<li><a href="#" title=""><img src="http://via.placeholder.com/150x71" alt=""></a></li>
-							<li><a href="#" title=""><img src="http://via.placeholder.com/105x71" alt=""></a></li>
-							<li><a href="#" title=""><img src="http://via.placeholder.com/95x71" alt=""></a></li>
-							<li><a href="#" title=""><img src="http://via.placeholder.com/128x71" alt=""></a></li>
-						</ul>
+							{% for partner in partners %}
+							<li><a href="#" title=""><img src="{{ partner.photo.url }}" alt=""></a></li>
+							{% endfor %}
 					</div>
 				</div><!--partners-section end-->
 			</div>

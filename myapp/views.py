@@ -1,12 +1,15 @@
-from unicodedata import name
 from django.shortcuts import redirect, render
-from .models import Category, ContactForm, OurWorks
+from .models import Category, ContactForm, OurWorks, Partner
 from django.contrib import messages
 
 # Create your views here.
 def home(request):
+    our_works = OurWorks.objects.all().order_by('-created_at')[:10]
+    partners = Partner.objects.all().order_by('-created_at')[:4]
     ctx = {
-        "home":"active"
+        "home":"active",
+        "our_works": our_works,
+        "partners": partners,
     }
     return render(request, 'main/index.html',ctx)
 

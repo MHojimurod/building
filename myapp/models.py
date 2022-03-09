@@ -6,7 +6,7 @@ from django.db import models
 
 
 class News(models.Model):
-    title = models.CharField(max_length=300,verbose_name="Mavzu")
+    title = models.CharField(max_length=300,verbose_name="Nomi")
     description = models.TextField(verbose_name="Text")
     photo = models.ImageField(verbose_name="Rasm",upload_to="images/")
 
@@ -31,7 +31,7 @@ class ContactForm(models.Model):
 
 
 class Category(models.Model):
-    title = models.CharField(max_length=128)
+    title = models.CharField(max_length=128, verbose_name="Nomi")
 
     def __str__(self) -> str:
         return self.title
@@ -41,11 +41,22 @@ class Category(models.Model):
 class OurWorks(models.Model):
     title = models.CharField(max_length=200,verbose_name="Nomi")
     photo = models.ImageField(verbose_name="Rasmi",upload_to="images/")
-    description = models.TextField()
+    description = models.TextField(verbose_name="Ma'lumoti")
 
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL, related_name="works", null=True)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, related_name="works", null=True, verbose_name="Kategoriyasi")
 
     created_at = models.DateField(auto_now_add=True)
 
     def __str__(self) -> str:
         return self.title
+
+
+class Partner(models.Model):
+    full_name = models.CharField(max_length=128, verbose_name=("To'liq ismi"))
+    phone = models.CharField(max_length=128, verbose_name="Telefon raqami")
+    short_description = models.TextField(verbose_name="Qisqacha ma'lumoti")
+    photo = models.ImageField(upload_to="partners/photo", verbose_name="Rasmi")
+
+    created_at = models.DateField(auto_now_add=True)
+
+
