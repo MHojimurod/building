@@ -40,9 +40,8 @@ class Category(models.Model):
 
 class OurWorks(models.Model):
     title = models.CharField(max_length=200,verbose_name="Nomi")
-    photo = models.ImageField(verbose_name="Rasmi",upload_to="images/")
     description = models.TextField(verbose_name="Ma'lumoti")
-
+    photo = models.ImageField(verbose_name="Asosiy rasim",upload_to="images/")
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, related_name="works", null=True, verbose_name="Kategoriyasi")
 
     created_at = models.DateField(auto_now_add=True)
@@ -50,6 +49,10 @@ class OurWorks(models.Model):
     def __str__(self) -> str:
         return self.title
 
+
+class WorkImages(models.Model):
+    our_works = models.ForeignKey(OurWorks, on_delete=models.CASCADE)
+    photo = models.ImageField(verbose_name="Qo'shimcha rasm",upload_to="images/")
 
 class Partner(models.Model):
     full_name = models.CharField(max_length=128, verbose_name=("To'liq ismi"))

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from myapp.models import Category, ContactForm, News, OurWorks, Partner
+from myapp.models import Category, ContactForm, News, OurWorks, Partner, WorkImages
 
 @admin.register(ContactForm)
 class ContactFormAdmin(admin.ModelAdmin):
@@ -17,13 +17,20 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ("title",)
 
 
+class WorkImagesAdmin(admin.StackedInline):
+    model = WorkImages
+    extra = 1   
+    max_num= 4
 @admin.register(OurWorks)
 class OurWorksAdmin(admin.ModelAdmin):
+    inlines = [WorkImagesAdmin]
     list_display = ("title", "category", "created_at")
+    class Meta:
+        model = OurWorks
 
 
 @admin.register(Partner)
 class PartnerAdmin(admin.ModelAdmin):
     list_display = ("full_name", "short_description", "phone")
     
-    
+

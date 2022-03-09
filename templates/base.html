@@ -34,6 +34,46 @@
 	</div><!--page-loading end-->
     <div class="wrapper ms-overlay">
         {% include 'navbar.html' %}
+        
+		<div class="responsive-mobile-menu">
+			<a href="#" title="" class="close-menu"><i class="ion-close"></i></a>
+			<ul>
+				<li><a href="#" title="">Asosiy</a>
+					<ul>
+						<li><a href="index.html" title="">Homepage 1</a></li>
+						<li><a href="index2.html" title="">Homepage 2</a></li>
+						<li><a href="index3.html" title="">Homepage 3</a></li>
+					</ul>
+				</li>
+				<li><a href="#" title="">Ishlarimiz</a>
+					<ul>
+						<li><a href="{% url 'works' %}" title="">Work Grid</a></li>
+						<li><a href="work-masonary.html" title="">Work Masonary</a></li>
+						<li><a href="works-parallax.html" title="">Works Parallax</a></li>
+						<li><a href="project-details.html" title="">Project Details</a></li>
+					</ul>
+				</li>
+				<li><a href="#" title="">YAngiliklar</a>
+					<ul>
+						<li><a href="{% url 'news' %}" title="">News Grid</a></li>
+						<li><a href="news-listing.html" title="">News Listing</a></li>
+						<li><a href="news-sidebar.html" title="">News Sidebar</a></li>
+					</ul>
+				</li>
+				<li><a href="#" title="">Blog</a>
+					<ul>
+						<li><a href="single-post.html" title="">Single Post</a>
+							<ul>
+								<li><a href="single-post-gallery.html" title="">Single Post Gallery</a></li>
+							</ul>
+						</li>
+						<li><a href="single-video.html" title="">Single Video</a></li>
+					</ul>
+				</li>
+				<li><a href="{% url 'about' %}" title="">Biz Haqimizda</a></li>
+				<li><a href="{% url 'contact' %}" title="">Aloqa</a></li>
+			</ul>
+		</div><!--responsive-mobile-menu end-->
         {% block content %}{% endblock %}
         {% include 'footer.html' %}
     </div>

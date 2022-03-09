@@ -17,7 +17,7 @@
                         <li><a class="{{works}}" href="{% url 'works' %}" title="">Loyihalar</a>
                             <ul>
                                 {% for i in projects %}
-                                <li><a href="" title="">{{i.title}}</a></li>
+                                <li><a href="{% url 'work_details' i.id %}" title="">{{i.title}}</a></li>
                                 {% endfor %}
                             </ul>
                         </li>
