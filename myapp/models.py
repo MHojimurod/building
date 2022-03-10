@@ -42,6 +42,9 @@ class OurWorks(models.Model):
     title = models.CharField(max_length=200,verbose_name="Nomi")
     description = models.TextField(verbose_name="Ma'lumoti")
     photo = models.ImageField(verbose_name="Asosiy rasim",upload_to="images/")
+    address = models.CharField(max_length=200,verbose_name="Manzil")
+    size = models.IntegerField(verbose_name="Maydoni")
+    floor = models.IntegerField(verbose_name="Qavati")
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, related_name="works", null=True, verbose_name="Kategoriyasi")
 
     created_at = models.DateField(auto_now_add=True)
