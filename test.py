@@ -31,3 +31,6 @@ import subprocess
 
 print(subprocess.getoutput("djrun"))
 subprocess.call("python management runserver")
+
+
+# funcion even

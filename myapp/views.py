@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from .models import Category, ContactForm, OurWorks, Partner
+from .models import Category, ContactForm, OurWorks, Partner, WorkImages
 from django.contrib import messages
 
 # Create your views here.
@@ -69,7 +69,9 @@ def why_this_company(request):
 
 def work_details(request,pk):
     project = OurWorks.objects.get(pk=pk)
+    images = WorkImages.objects.filter(our_works__id=pk)
     ctx = {
-        "project": project
+        "project": project,
+        "images": images
     }
     return render(request, 'main/work-details.html',ctx)

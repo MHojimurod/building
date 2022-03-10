@@ -626,8 +626,8 @@ header.full .logo {
 }
 .banner-section h2 {
 	position: absolute;
-	top: 50%;
-	left: 40%;
+	top: 80%;
+	left: 28%;
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	-moz-transform: translateX(-50%) translateY(-50%);
 	-ms-transform: translateX(-50%) translateY(-50%);
@@ -2126,10 +2126,10 @@ main.lght .ep-icon:after {
 	background: #ffa800;
 }
 .house-slider .slick-next::before {
-	content: '\e87a';
+	content: ">";
 }
 .house-slider .slick-prev::before {
-	content: '\e879';
+	content: '<';
 }
 .house-slider.style2 .slick-prev,
 .house-slider.style2 .slick-next {
@@ -4116,10 +4116,10 @@ main.lght .ep-icon:after {
 	color: #fff;
 }*/
 .testimonial-slider .slick-prev::before {
-	content: '\f104';
+	content: "\f104";
 }
 .testimonial-slider .slick-next::before {
-	content: '\f105'; 
+	content: "\f105"; 
 }
 .testimonial-slider .slick-prev::before,
 .testimonial-slider .slick-next::before {
