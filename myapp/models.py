@@ -1,6 +1,8 @@
 from distutils.command.upload import upload
 from sre_constants import CATEGORY
 from django.db import models
+from django.core.validators import FileExtensionValidator
+val=[FileExtensionValidator(allowed_extensions=['pdf'])]
 
 # Create your models here.
 
@@ -36,12 +38,11 @@ class Category(models.Model):
     def __str__(self) -> str:
         return self.title
 
-
-
 class OurWorks(models.Model):
     title = models.CharField(max_length=200,verbose_name="Nomi")
     description = models.TextField(verbose_name="Ma'lumoti")
     photo = models.ImageField(verbose_name="Asosiy rasim",upload_to="images/")
+    pdf = models.FileField(verbose_name="Fayl",upload_to="images/",validators=val)
     address = models.CharField(max_length=200,verbose_name="Manzil")
     size = models.IntegerField(verbose_name="Maydoni")
     floor = models.IntegerField(verbose_name="Qavati")
