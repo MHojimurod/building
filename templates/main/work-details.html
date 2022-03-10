@@ -19,16 +19,8 @@
     <section>
       <div class="container">
         <div class="location-details bfr">
-          <h2 class="post-title size2">Mercedes Benz Mesuem</h2>
-          <p>
-            The Mercedes-Benz Museum is the only museum in the world that can
-            document in a single continuous timeline the more than 130 years of
-            auto industry history from its very beginnings to the present day.
-            On nine levels and covering a floor space of 16,500 square metres,
-            the museum presents 160 vehicles and over 1,500 exhibits. As a place
-            of innovation, it also demonstrates that history can point the way
-            ahead
-          </p>
+          <h2 class="post-title size2">{{project.title}}</h2>
+          <p></p>
         </div>
         <!--location-details end-->
         <div class="house-info">
@@ -42,30 +34,15 @@
               <span>{{project.size}} m²</span>
             </li>
             <li>
-              <strong>Yil</strong>
-              <span>2017</span>
-            </li>
-            <li>
-              <strong>Client</strong>
-              <span>Mercedes Benz</span>
-            </li>
-            <li>
-              <strong>Xizmat</strong>
-              <span>Design, Building, Project Management</span>
+              <strong>Qavat</strong>
+              <span>{{project.floor}} qavat</span>
             </li>
           </ul>
         </div>
         <!--house-info end-->
         <div class="location-details">
-          <h2 class="post-title">Concept</h2>
-          <p>
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don't look even slightly
-            believable. If you are going to use a passage of Lorem Ipsum, you
-            need to be sure there isn't anything embarrassing hidden in the
-            middle of text.
-          </p>
+          <h2 class="post-title">Ma'lumot</h2>
+          <p style="word-wrap: break-word">{{project.description}}</p>
         </div>
         <!--location-details end-->
       </div>
@@ -85,6 +62,22 @@
           {% endfor %}
         </div>
       </div>
+      <div class="col-lg-12 text-center">
+        <a
+          style="
+            color: #000000;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: capitalize;
+            background-color: #ffa800;
+            padding: 15px 35px;
+            border: 0;
+            cursor: pointer;
+          "
+          href="{{project.pdf}}"
+          >Batafsil</a
+        >
+      </div>
     </section>
   </div>
   <!--page-details-main end-->
@@ -93,108 +86,25 @@
     <div class="pgr-controls">
       <div class="container">
         {% if project.get_previous_by_created_at %}
-        <a href="{% url 'work_details' project.get_previous_by_created_at.id %}" class="ta-left"
-          ><span class="lnr lnr-arrow-left"></span>{{project.get_previous_by_created_at.title}}</a
+        <a
+          href="{% url 'work_details' project.get_previous_by_created_at.id %}"
+          class="ta-left"
+          ><span class="lnr lnr-arrow-left"></span
+          >{{project.get_previous_by_created_at.title}}</a
         >
-        {% endif %}
-		
-<<<<<<< HEAD
-		{% if project.get_next_by_created_at %}
-        <a href="{% url 'work_details' project.get_next_by_created_at.id %}" class="ta-right"
-          ><span class="lnr lnr-arrow-left"></span>{{project.get_next_by_created_at.title}}</a
-        >
+        {% endif %} {% if project.get_next_by_created_at %}
+        <a
+          href="{% url 'work_details' project.get_next_by_created_at.id %}"
+          class="ta-right"
+          >{{project.get_next_by_created_at.title }}<span
+            class="lnr lnr-arrow-right"
+          ></span
+        ></a>
         {% endif %}
       </div>
     </div>
     <!--pgr-controls end-->
   </section>
 </main>
-=======
-		<section>
-			<div class="block no-padding">
-				<div class="banner-section">
-					<img style="object-fit: cover; height: 100vh;" src="/media/{{project.photo}}" alt="">
-					<h2>{{project.title}}</h2>
-				</div><!--banner-section end-->
-			</div>
-		</section>
-
-
-
-		<main>
-			<div class="page-details-main">
-				<section>
-					<div class="container">
-						<div class="location-details bfr">
-							<h2 class="post-title size2">{{project.title}}</h2>
-							<p></p>
-						</div><!--location-details end-->
-						<div class="house-info">
-							<ul>
-								<li>
-									<strong>Manzil</strong>
-									<span>{{project.address}}</span>
-								</li>
-								<li>
-									<strong>Maydoni</strong>
-									<span>{{project.size}} m²</span>
-								</li>
-								<li>
-									<strong>Qavat</strong>
-									<span>{{project.floor}} qavat</span>
-								</li>
-							</ul>
-						</div><!--house-info end-->
-						<div class="location-details">
-							<h2 class="post-title">Ma'lumot</h2>
-							<p style="word-wrap: break-word;">{{project.description}}</p>
-						</div><!--location-details end-->
-					</div>
-				</section>
-
-
-				<section>
-					<div class="house-imgs-slides">
-						<div class="house-slider">
-							{% for i in images %}
-							<div class="house-slide">
-								<img style="height: 75vh; object-fit: cover;" src="/media/{{i.photo}}" alt="">
-							</div>
-							{% endfor %}
-							
-						</div>
-					</div>
-					<div class="col-lg-12 text-center">
-						<a style="color: #000000;
-						font-size: 14px;
-						font-weight: 600;
-						text-transform: capitalize;
-						background-color: #ffa800;
-						padding: 15px 35px;
-						border: 0;
-						cursor: pointer;" href="/media/{{project.pdf}}">Batafsil</a>
-					</div>
-					
-				</section>
-
-				
-
-			</div><!--page-details-main end-->
-
-			<section>
-				<div class="pgr-controls">
-					<div class="container">
-						<a href="#" class="ta-left"><span class="lnr lnr-arrow-left"></span>UMI Complex Private Residence</a>
-						<a href="#" class="ta-right">MME Consulting Office<span class="lnr lnr-arrow-right"></span></a>
-					</div>
-				</div><!--pgr-controls end-->
-			</section>
-
-		</main>
-
-
-
-
->>>>>>> 762a833c7619cb1ce97cbb56284ba1d298afbd90
 
 {% endblock %}
