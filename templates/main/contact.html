@@ -1,103 +1,122 @@
+{% extends 'base.html' %} {% load static %} {% block content %} {% block title
+%}Aloqa uchun{% endblock %}
 
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
-{% block title %}Aloqa uchun{% endblock %}
+<section>
+  <div class="block no-padding">
+    <iframe
+      style="height: 85vh !important; width: 100%"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d758.4944707457468!2d68.76609172924795!3d40.497872118526146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b207b88f926fef%3A0x53f39779cb628b0d!2sFrom%20Zero!5e0!3m2!1sru!2s!4v1646744474518!5m2!1sru!2s"
+      style="border: 0"
+      allowfullscreen="true"
+      loading="lazy"
+    ></iframe>
+  </div>
+</section>
 
-	
-	<section>
-		<div class="block no-padding">
-			<iframe style="height: 85vh !important; width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d758.4944707457468!2d68.76609172924795!3d40.497872118526146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b207b88f926fef%3A0x53f39779cb628b0d!2sFrom%20Zero!5e0!3m2!1sru!2s!4v1646744474518!5m2!1sru!2s" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
-		</div>
-	</section>
+<section>
+  {% include 'messages.html' %}
+  <div class="contact-info-sec">
+    <div class="container">
+      <div class="cntct-details">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="contact-address">
+              <h2><strong>Sirdaryo </strong>viloyati</h2>
+              <p>Guliston shahar, Sayhun ko'chasi 3A</p>
+              <span><b>Email:</b> fromzero.uz@gmail.com</span>
+            </div>
+            <!--contact-address end-->
+          </div>
+          <div class="col-lg-6">
+            <div class="contact-more-info">
+              <h5>Telefon:</h5>
+              <h2>+998-(67)-226-3533</h2>
+              <div class="address">
+                <h3>Brand Offices :</h3>
+                <ul>
+                  <li><a href="#" title="">Allentown PA</a></li>
+                  <li><a href="#" title="">Allanta, GA</a></li>
+                  <li><a href="#" title="">Chicago, IL</a></li>
+                  <li><a href="#" title="">Dallas, TX</a></li>
+                  <li><a href="#" title="">Edison, NJ</a></li>
+                  <li><a href="#" title="">Houston, TX</a></li>
+                </ul>
+              </div>
+              <!--address end-->
+              <div class="address">
+                <h3>Work hours:</h3>
+                <span>Du - Shan: 9:00 - 19:00</span>
+              </div>
+            </div>
+            <!--contact-more-info end-->
+          </div>
+        </div>
+      </div>
+      <!--cntct-details end-->
+      <div class="contact-form-sec">
+        <h3>Savolingiz bormi? Biz bilan bog'laning</h3>
+        <p
+          class="success alert alert-success"
+          id="success"
+          style="display: none"
+        ></p>
+        <p
+          class="error alert alert-danger"
+          id="error"
+          style="display: none"
+        ></p>
+        <form name="contact_form_3" id="contact_form_3" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="axn" value="contact_3" />
+          <div class="row">
+            <div class="col-lg-4">
+              <input type="text" name="name" id="name" placeholder="Ism*" />
+            </div>
+            <div class="col-lg-4">
+              <input type="text" name="email" id="email" placeholder="Email*" />
+            </div>
+            <div class="col-lg-4">
+              <input
+                type="text"
+                name="subject"
+                placeholder="Mavzu (Ixtiyoriy)"
+              />
+            </div>
+            <div class="col-lg-12">
+              <textarea
+                name="description"
+                id="description"
+                placeholder="Xabar"
+              ></textarea>
+            </div>
+            <div class="col-lg-12 text-center">
+              <button type="submit" id="submit_3">Yuborish</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--contact-form-sec end-->
+    </div>
+  </div>
+  <!--contact-info-sec end-->
+</section>
 
-	
-	<section>
-		{% include 'messages.html' %}
-		<div class="contact-info-sec">
-			<div class="container">
-				<div class="cntct-details">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="contact-address">
-								<h2><strong>Sirdaryo </strong>viloyati</h2>
-								<p>Guliston shahar, Sayhun ko'chasi 3A</p>
-								<span><b>Email:</b> fromzero.uz@gmail.com</span>
-							</div><!--contact-address end-->
-						</div>
-						<div class="col-lg-6">
-							<div class="contact-more-info">
-								<h5>Telefon:</h5>
-								<h2>+998-(67)-226-3533</h2>
-								<div class="address">
-									<h3>Brand Offices :</h3>
-									<ul>
-										<li><a href="#" title="">Allentown PA</a></li>
-										<li><a href="#" title="">Allanta, GA</a></li>
-										<li><a href="#" title="">Chicago, IL</a></li>
-										<li><a href="#" title="">Dallas, TX</a></li>
-										<li><a href="#" title="">Edison, NJ</a></li>
-										<li><a href="#" title="">Houston, TX</a></li>
-									</ul>
-								</div><!--address end-->
-								<div class="address">
-									<h3>Work hours:</h3>
-									<span>Du - Shan: 9:00 - 19:00</span>
-								</div>
-							</div><!--contact-more-info end-->
-						</div>
-					</div>
-				</div><!--cntct-details end-->
-				<div class="contact-form-sec">
-					<h3>Savolingiz bormi? Biz bilan bog'laning</h3>
-					<p class="success alert alert-success" id="success" style="display:none;"></p>
-					<p class="error alert alert-danger" id="error" style="display:none;"></p>
-					<form name="contact_form_3" id="contact_form_3" method="post">
-						{% csrf_token %}
-						<input type="hidden" name="axn" value="contact_3">
-						<div class="row">
-							<div class="col-lg-4">
-								<input type="text" name="name" id="name" placeholder="Ism*">
-							</div>
-							<div class="col-lg-4">
-								<input type="text" name="email" id="email" placeholder="Email*">
-							</div>
-							<div class="col-lg-4">
-								<input type="text" name="subject" placeholder="Mavzu (Ixtiyoriy)">
-							</div>
-							<div class="col-lg-12">
-								<textarea name="description" id="description" placeholder="Xabar"></textarea>
-							</div>
-							<div class="col-lg-12 text-center">
-								<button type="submit" id="submit_3">Yuborish</button>
-							</div>
-						</div>
-					</form>
-				</div><!--contact-form-sec end-->
-			</div>
-		</div><!--contact-info-sec end-->
-	</section>
-
-	{#% include 'messages.html' %#}
-{% for i in messages %}
-
-{{i}}
-{% endfor %}
-
-
-
-
-
-
-
-
-{% endblock %}
-{% block javascript %}
+{#% include 'messages.html' %#} {% for i in messages %} {{i}} {% endfor %} {%
+endblock %} {% block javascript %}
 <script>
-	setTimeout(function () {
-    $("#message").fadeOut("slow")
-}, 3000)
+  setTimeout(function () {
+    $("#message").fadeOut("slow");
+  }, 3000);
 </script>
 
 <script type="text/javascript" src="/static/js/contact-form.js"></script>
+
+<script>
+  function data() {
+    const chk = document.getElementById("day_night");}
+
+  chk.addEventListener("change", () => {
+    document.body.classList.toggle("dark");
+  });
+</script>
 {% endblock %}
