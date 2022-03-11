@@ -1,4 +1,13 @@
 <header class="pb stick">
+<<<<<<< HEAD
+  <div class="hd_bar">
+    <div class="container">
+      <div class="header-bar">
+        <div class="logo">
+          <a href="\" title=""
+            ><img style="width: 74px" src="/static/images/logo.png" alt=""
+          /></a>
+=======
     <div class="hd_bar">
         <div class="container">
             <div class="header-bar">
@@ -39,6 +48,67 @@
                     </ul>
                 </div><!--select-language end-->
             </div><!--header-bar end-->
+>>>>>>> 64dcc0cad3bca728ef72857d3ab603b825863585
         </div>
-    </div><!--hd_bar end-->
+        <!--logo end-->
+        <nav>
+          <ul>
+            <li>
+              <a href="\" title="">Kompaniya Haqida</a>
+              <ul>
+                <li>
+                  <a href="{% url 'about_company' %}" title=""
+                    >Kompaniya Haqida</a
+                  >
+                </li>
+                <li>
+                  <a href="{% url 'mission' %}" title=""
+                    >Missiya va qadriyatlar</a
+                  >
+                </li>
+                <li>
+                  <a href="{% url 'about' %}" title="">Nega aynan From Zero</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="{{works}}" href="{% url 'works' %}" title=""
+                >Loyihalar</a
+              >
+              <ul>
+                {% for i in projects %}
+                <li>
+                  <a href="{% url 'work_details' i.id %}" title=""
+                    >{{i.title}}</a
+                  >
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+
+            <li>
+              <a class="{{contact}}" href="{% url 'contact' %}" title=""
+                >Aloqa uchun</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!--nav end-->
+        <div class="mobile-menu-btn">
+          <a href="#" title="" class="open-menu"><i class="fa fa-bars"></i></a>
+        </div>
+        <!--mobile-menu-btn end-->
+
+        <div class="select-language">
+          <ul>
+            <li class="active"><a href="#" title="">Uz</a></li>
+            <li><a href="#" title="">En</a></li>
+          </ul>
+        </div>
+        <!--select-language end-->
+      </div>
+      <!--header-bar end-->
+    </div>
+  </div>
+  <!--hd_bar end-->
 </header>

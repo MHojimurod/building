@@ -78,7 +78,6 @@ def work_details(request,pk):
     project = OurWorks.objects.get(pk=pk)
     images = WorkImages.objects.filter(our_works__id=pk)
     antoher_projects = OurWorks.objects.filter(~Q(pk=project.id),category=project.category)[:4]
-    print(antoher_projects)
     ctx = {
         "project": project,
         "images": images,
