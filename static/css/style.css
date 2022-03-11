@@ -1671,7 +1671,6 @@ nav ul li input:checked::before {
 	left: 0;
 	width: 50%;
 	height: 100%;
-	background-image: url(http://via.placeholder.com/270x202);
 	background-size: cover;
 	opacity: 0;
 	visibility: hidden;
