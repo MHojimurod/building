@@ -86,22 +86,23 @@
       <div class="block">
         <div class="container no-pd">
           <div class="title">
-            <h3 class="heading-title">Boshqa loyihalarmiz</h3>
+            <h3 class="heading-title">O'xshash loyihalarmiz</h3>
           </div><!--title end-->
           <div class="our-services">
             <div class="row">
               {% for i in antoher_projects %}
               <div  class="col-lg-3 col-md-6 col-sm-6">
-                <div class="service-details">
-                  <div style="height: 27vh;
-                  overflow: hidden;" class="service-info">
-                    <div class="srvc-icon">
-                      <span class="lnr lnr-cog"></span>
-                      <h3>{{i.title}}</h3>
+                <a href="{% url 'work_details' i.id %}">
+                  <div  style="background-image: url(/media/{{i.photo}});object-fit: cover;background-position: center; " class="service-details">
+                    <div style="height: 27vh;
+                    overflow: hidden;" class="service-info">
+                      <div class="srvc-icon">
+                        <span class="lnr lnr-cog"></span>
+                        <h3>{{i.category.title}}</h3>
+                      </div>
                     </div>
-                    <p>{{i.description}}</p>
                   </div>
-                </div><!-- service-details end-->
+                </a>
               </div>
               {% endfor %}
             </div>
