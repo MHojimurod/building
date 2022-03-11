@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from .models import Category, ContactForm, OurWorks, Partner, WorkImages
 from django.contrib import messages
+from django.db.models import Q
 from django.core.paginator import Paginator
 
 # Create your views here.
@@ -76,8 +77,11 @@ def why_this_company(request):
 def work_details(request,pk):
     project = OurWorks.objects.get(pk=pk)
     images = WorkImages.objects.filter(our_works__id=pk)
+    antoher_projects = OurWorks.objects.filter(~Q(pk=project.id),category=project.category)[:4]
+    print(antoher_projects)
     ctx = {
         "project": project,
-        "images": images
+        "images": images,
+        "antoher_projects":antoher_projects
     }
     return render(request, 'main/work-details.html',ctx)

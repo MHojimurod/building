@@ -1378,36 +1378,37 @@ footer:hover {
 	font-size: 14px;
 	border: 0;
 }
-.select-language ul input::before{
+  input::before{
 	content: "";
 	position: absolute;
 	height: 100%;
 	width: 50%;
 	border-radius: 50%;
 	transition: all 0.9s;
-	background-color: #fac824;
+	background-color: #f0f2f3;
 }
-.select-language ul input {
+nav ul li input {
 	-webkit-appearance:none;
 	position: relative;
 	width: 50px;
 	height: 25px;
-	background-image: url('../images/photo_2021-12-15_15-04-48.jpg');
+	background-image: url('../images/night.jpg');
 	background-size: cover;
 	border-radius: 50px;
 	transition: background-image .90s;
+	margin-left: 50px;
 	/* box-shadow: 0 2px 8px 2px rgb(70, 69, 69); */
 
 }
-.select-language ul input:checked{
-	background-image: url('../images/photo_2021-12-15_15-04-21.jpg');
+nav ul li  input:checked{
+	background-image: url('../images/day.jpg');
 	transition: background-image .90s;
 }
 
-.select-language ul input:checked::before {
+nav ul li input:checked::before {
 	transform: translate(100%);
 	transition: all .9s;
-	background-color: #f0f2f3;
+	background-color: #fac824;
 }
 
 /* ========= widget-categories =========== */
