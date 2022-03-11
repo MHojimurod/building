@@ -70,5 +70,5 @@ class Partner(models.Model):
 
 class Banner(models.Model):
     image = models.ImageField(upload_to="banners/", verbose_name="rasmi")
-    title = models.CharField(max_length=256, verbose_name="nomi")
+    title = models.TextField(verbose_name="nomi")
 
