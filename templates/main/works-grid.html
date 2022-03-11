@@ -1,64 +1,101 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %} {% block content %}
+{% block title %}Bizning Loyihalar{% endblock %}
 
-{% block content %}
-		
+<section>
+  <div class="container">
+    <div class="pager-details full text-center">
+      <h2 class="heading-title">Bizning Loyihalarimiz</h2>
+      <ul>
+        <li><a href="{% url 'home' %}">Asosiy</a></li>
+        <li><span>Ishlarimiz</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-		<section>
-			<div class="container">
-				<div class="pager-details full text-center">
-					<h2 class="heading-title">Bizning Ishlarimiz</h2>
-					<ul>
-						<li><a href="#" title="">Asosiy</a></li>
-						<li><span>Ishlarimiz</span></li>
-					</ul>
-				</div>
+<section>
+  <div class="portfolio-sec">
+    <div class="container">
+      <div class="portfolio-items-filter">
+        <section class="options mgbtm-35">
+          <div class="option-isotop">
+            <ul
+              id="filter"
+              class="option-set filters-nav"
+              data-option-key="filter"
+            >
+              <li><a class="selected" data-option-value="*">All</a></li>
+              {% for i in categories %}
+              <li><a data-option-value=".{{i.id}}">{{i.title}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+        <div class="portfolio-grid">
+          <div class="row">
+            <div class="masonary style2">
+              {% for project in projects %}
+              <div
+                class="col-lg-4 col-md-4 col-sm-6 col-xs-12 {{project.category.id}}"
+              >
+                <div class="portfolio-item">
+                  <div class="pt-img">
+                    <img
+                      style="width: 350px; height: 280px"
+                      src="{{project.photo.url}}"
+                      alt=""
+                    />
+                  </div>
+                  <div class="item-info">
+                    <span>{{project.category}}</span>
+                    <h3>
+                      <a href="{% url 'work_details' project.id %}" title=""
+                        >{{ project.title }}</a
+                      >
+                    </h3>
+                  </div>
+                </div>
+                <!--portfolio-item end-->
+              </div>
+              {% endfor %}
+            </div>
+            <!--masonary end-->
+            <!-- #Here will be pagination -->
+
+            <div class="post-pagination">
+				<nav aria-label="Page navigation">	
+					{% if projects.has_other_pages %}
+					  <ul class="pagination">
+						{% if projects.has_previous %}
+						<li class="page-item"><a class="page-link" href="?page={{ projects.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
+						{% endif %}
+
+						{% for i in projects.paginator.page_range %}
+
+						{% if projects.number == i %}
+						<li class="page-item active"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+						{% endif %}
+						{% endfor %}
+
+						{% if projects.has_next %}
+						<li class="page-item"><a class="page-link" href="?page={{ projects.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
+						{% endif %}
+
+
+					  </ul>
+					  {% endif %}
+				</nav>
 			</div>
-		</section>
+          </div>
+        </div>
+        <!--portfolio-grid end-->
+      </div>
+      <!--portfolio-items-filter end-->
+    </div>
+  </div>
+  <!--portfolio-sec end-->
+</section>
 
-
-		<section>
-			<div class="portfolio-sec">
-				<div class="container">
-					<div class="portfolio-items-filter">
-						<section class="options mgbtm-35">
-							<div class="option-isotop">
-								<ul id="filter" class="option-set filters-nav" data-option-key="filter">
-									<li><a class="selected" data-option-value="*">All</a></li>
-									{% for i in categories %}
-									<li><a data-option-value=".{{i.id}}">{{i.title}}</a></li>
-									{% endfor %}
-								</ul>
-							</div>
-						</section>
-						<div class="portfolio-grid">
-							<div class="row">
-								<div class="masonary style2">
-									{% for project in projects %}
-									<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 {{project.category.id}}">
-										<div class="portfolio-item">
-											<div class="pt-img">
-												<img style="width: 350px; height: 280px;" src="{{project.photo.url}}" alt="">
-											</div>
-											<div class="item-info">
-												<span>{{project.category}}</span>
-												<h3><a href="{% url 'work_details' project.id %}" title="">{{ project.title }}</a></h3>
-											</div>
-										</div><!--portfolio-item end-->
-									</div>
-									{% endfor %}	
-								</div><!--masonary end-->
-								<div class="load-more-items">
-									<a href="#" title="">Load more</a>
-								</div><!--load-more-items end-->
-							</div>
-						</div><!--portfolio-grid end-->
-					</div><!--portfolio-items-filter end-->
-				</div>
-			</div><!--portfolio-sec end-->
-		</section>
-
-{% endblock %}
-{% block javascript %}
+{% endblock %} {% block javascript %}
 <script type="text/javascript" src="/static/js/isotope.js"></script>
 {% endblock %}

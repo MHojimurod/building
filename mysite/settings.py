@@ -135,5 +135,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #Messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
-    messages.SUCCESS: 'warning',
 }

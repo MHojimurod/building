@@ -2,17 +2,17 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% block title %}Aloqa uchun{% endblock %}
 
 	
 	<section>
 		<div class="block no-padding">
-			<iframe style="height: 100vh !important; width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d758.4944707457468!2d68.76609172924795!3d40.497872118526146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b207b88f926fef%3A0x53f39779cb628b0d!2sFrom%20Zero!5e0!3m2!1sru!2s!4v1646744474518!5m2!1sru!2s" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
+			<iframe style="height: 85vh !important; width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d758.4944707457468!2d68.76609172924795!3d40.497872118526146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b207b88f926fef%3A0x53f39779cb628b0d!2sFrom%20Zero!5e0!3m2!1sru!2s!4v1646744474518!5m2!1sru!2s" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
 		</div>
 	</section>
-	{% include 'messages.html' %}
-
 
 	<section>
+		{% include 'messages.html' %}
 		<div class="contact-info-sec">
 			<div class="container">
 				<div class="cntct-details">
@@ -88,6 +88,11 @@
 
 {% endblock %}
 {% block javascript %}
+<script>
+	setTimeout(function () {
+    $("#message").fadeOut("slow")
+}, 3000)
+</script>
 
 <script type="text/javascript" src="/static/js/contact-form.js"></script>
 {% endblock %}

@@ -44,8 +44,8 @@ class OurWorks(models.Model):
     photo = models.ImageField(verbose_name="Asosiy rasim",upload_to="images/")
     pdf = models.FileField(verbose_name="Fayl",upload_to="images/",validators=val)
     address = models.CharField(max_length=200,verbose_name="Manzil")
-    size = models.IntegerField(verbose_name="Maydoni")
-    floor = models.IntegerField(verbose_name="Qavati")
+    size = models.PositiveIntegerField(verbose_name="Maydoni")
+    floor = models.PositiveIntegerField(verbose_name="Qavati")
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, related_name="works", null=True, verbose_name="Kategoriyasi")
 
     created_at = models.DateField(auto_now_add=True)
