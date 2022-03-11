@@ -1,11 +1,8 @@
 from django.shortcuts import redirect, render
 from .models import Category, ContactForm, OurWorks, Partner, WorkImages
 from django.contrib import messages
-<<<<<<< HEAD
 from django.db.models import Q
-=======
 from django.core.paginator import Paginator
->>>>>>> 5ac174d31da1736d1cdbd96357fcfc906adab472
 
 # Create your views here.
 def home(request):
