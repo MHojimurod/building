@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from .models import Category, ContactForm, OurWorks, Partner, WorkImages
+from .models import Banner, Category, ContactForm, OurWorks, Partner, WorkImages
 from django.contrib import messages
 from django.db.models import Q
 from django.core.paginator import Paginator
@@ -8,10 +8,12 @@ from django.core.paginator import Paginator
 def home(request):
     our_works = OurWorks.objects.all().order_by('-created_at')[:10]
     partners = Partner.objects.all().order_by('-created_at')[:4]
+    banner = Banner.objects.order_by("-id").all().first()
     ctx = {
         "home":"active",
         "our_works": our_works,
         "partners": partners,
+        "banner": banner
     }
     return render(request, 'main/index.html',ctx)
 
