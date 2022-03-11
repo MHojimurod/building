@@ -1,7 +1,11 @@
 from django.shortcuts import redirect, render
 from .models import Category, ContactForm, OurWorks, Partner, WorkImages
 from django.contrib import messages
+<<<<<<< HEAD
 from django.db.models import Q
+=======
+from django.core.paginator import Paginator
+>>>>>>> 5ac174d31da1736d1cdbd96357fcfc906adab472
 
 # Create your views here.
 def home(request):
@@ -46,12 +50,17 @@ def news(request):
     }
     return render(request, 'main/news-grid.html',ctx)
 def works(request):
-    projects = OurWorks.objects.all()
+    
+    projects = OurWorks.objects.order_by('-created_at')
     categories = Category.objects.all()
+    paginator = Paginator(projects, 6)
+    page = request.GET.get('page')
+    paged_projects = paginator.get_page(page)
     ctx = {
         "works":"active",
-        "projects": projects,
+        "projects": paged_projects,
         "categories": categories,
+        'paged_cars': paged_projects,
     }
     return render(request, 'main/works-grid.html',ctx)
 

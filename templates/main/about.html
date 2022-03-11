@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% block title %}Nega From Zero ?{% endblock %}
 <div class="responsive-mobile-menu">
 	<a href="#" title="" class="close-menu"><i class="ion-close"></i></a>
 	<ul>
@@ -19,7 +20,7 @@
 				<li><a href="project-details.html" title="">Project Details</a></li>
 			</ul> -->
 		</li>
-		<li><a class="{{news}}" href="{% url 'news' %}" title="">YAngiliklar</a>
+		<li><a class="{{news}}" href="{% url 'news' %}" title="">Yangiliklar</a>
 			<!-- <ul>
 				<li><a href="{% url 'news' %}" title="">News Grid</a></li>
 				<li><a href="news-listing.html" title="">News Listing</a></li>
