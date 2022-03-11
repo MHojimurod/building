@@ -1,5 +1,6 @@
-{% extends 'base.html' %} {% load static %} {% block content %} {% block title
-%}Aloqa uchun{% endblock %}
+{% extends 'base.html' %} {% load static %} 
+{% block title %}Aloqa uchun {% endblock %}
+{% block content %} 
 
 <section>
   <div class="block no-padding">
@@ -100,9 +101,8 @@
   </div>
   <!--contact-info-sec end-->
 </section>
-
-{#% include 'messages.html' %#} {% for i in messages %} {{i}} {% endfor %} {%
-endblock %} {% block javascript %}
+{% endblock %} 
+{% block javascript %}
 <script>
   setTimeout(function () {
     $("#message").fadeOut("slow");
