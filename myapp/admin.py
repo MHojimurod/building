@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from myapp.models import Category, ContactForm, News, OurWorks, Partner, WorkImages
+from myapp.models import Category, ContactForm, News, OurWorks, Partner, WorkImages, Banner
 
 @admin.register(ContactForm)
 class ContactFormAdmin(admin.ModelAdmin):
@@ -34,3 +34,7 @@ class PartnerAdmin(admin.ModelAdmin):
     list_display = ("full_name", "short_description", "phone")
     
 
+
+@admin.register(Banner)
+class PartnerAdmin(admin.ModelAdmin):
+    list_display = ("title",)
