@@ -120,7 +120,7 @@
               data-splitout="none"
               data-elementdelay="0.04"
             >
-            {{banner.title}}
+            {{banner.title|safe}}
               <!-- “ Biz qurgan yaxshi narsalar <br />
               oxir-oqibat bizni quradi ” -->
             </div>
@@ -143,7 +143,7 @@
               </li>
               <li>
                 Telefon:
-                <strong class="scnd text-white">+998 97 111 1111</strong>
+                <strong class="scnd text-white">+998-(67)-226-3533  </strong>
               </li>
             </ul>
           </div>
@@ -152,9 +152,9 @@
             <ul>
               <li>Bizni kuzatib boring:</li>
               <li>
-                <a href="#" title=""><i class="fa fa-twitter"></i></a>
+                <a href="#" title=""><i class="fa fa-telegram"></i></a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="#" title=""><i class="fa fa-facebook"></i></a>
               </li>
               <li>
@@ -165,7 +165,7 @@
               </li>
               <li>
                 <a href="#" title=""><i class="fa fa-rss"></i></a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -352,7 +352,7 @@
               <div class="container">
                 <h3>{{ i.title }}</h3>
                 <a href="{% url 'work_details' i.id %}"
-                  >View Project <i class="bi bi-chevron-double-right"></i
+                  >Batafsil <i class="bi bi-chevron-double-right"></i
                 ></a>
               </div>
             </div>

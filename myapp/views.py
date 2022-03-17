@@ -65,14 +65,23 @@ def works(request):
 
 
 def about_company(request):
-    return render(request, 'main/index3.html')
+    ctx = {
+         "home":"active",
+    }
+    return render(request, 'main/index3.html',ctx)
 
 def mission(request):
-    return render(request, 'main/mission.html')
+    ctx = {
+         "home":"active",
+    }
+    return render(request, 'main/mission.html',ctx)
 
     
 def why_this_company(request):
-    return render(request, 'main/mission.html')
+    ctx = {
+         "home":"active",
+    }
+    return render(request, 'main/mission.html',ctx)
 
 
 
@@ -81,6 +90,7 @@ def work_details(request,pk):
     images = WorkImages.objects.filter(our_works__id=pk)
     antoher_projects = OurWorks.objects.filter(~Q(pk=project.id),category=project.category)[:4]
     ctx = {
+        "works":"active",
         "project": project,
         "images": images,
         "antoher_projects":antoher_projects
