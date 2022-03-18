@@ -1,5 +1,7 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} {% load static %} 
 {% block title %}{{ project.title }}{% endblock %}
+{% block content %}
+
 
 <section>
   <div class="block no-padding">
@@ -58,12 +60,13 @@
               style="height: 75vh; object-fit: cover"
               src="/media/{{i.photo}}"
               alt=""
+              
             />
           </div>
           {% endfor %}
         </div>
       </div>
-      <div class="col-lg-12 text-center">
+      <div slick-prev komiljonov slick-arrow class="col-lg-12 text-center" onclick="max_image('');">
         <a
           style="
             color: #000000;
@@ -139,5 +142,32 @@
   </section>
 </main>
 
-{% endblock %}
 
+
+{% endblock %}
+{% block javascript %}
+
+<script>
+  
+  
+  function max_image(url) {
+    const img = document.createElement('img');
+    img.src = url;
+    img.style.position = 'fixed';
+    img.style.width = '100%';
+    img.style.height = '100%';
+    img.style.objectFit = 'cover';
+    img.style.zIndex = '9999';
+    img.style.top = '0';
+    img.style.left = '0';
+    document.body.appendChild(img);
+    img.addEventListener('click', ()=> {
+      document.body.removeChild(img);
+    });
+  }
+  document.body.addEventListener('click', (e)=> {
+    console.log(e.target);
+  });
+</script>
+  
+  {% endblock %}

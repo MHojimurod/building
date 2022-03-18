@@ -1,5 +1,6 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
-{% block title %}Bosh Sahifa{% endblock %}
+{% extends 'base.html' %} {% load static %} 
+{% block title %} Bosh Sahifa {% endblock %}
+{% block content %} 
 <!-- <div class="responsive-mobile-menu">
 	<a href="#" title="" class="close-menu"><i class="ion-close"></i></a>
 	<ul>
@@ -120,7 +121,7 @@
               data-splitout="none"
               data-elementdelay="0.04"
             >
-            {{banner.title|safe}}
+              {{banner.title|safe}}
               <!-- “ Biz qurgan yaxshi narsalar <br />
               oxir-oqibat bizni quradi ” -->
             </div>
@@ -139,11 +140,15 @@
             <ul>
               <li>
                 Email:
-                <strong>fromzero.uz@gmail.com</strong>
+                <strong><a href="mailto:fromzero.uz@gmail.com">fromzero.uz@gmail.com</a></strong>
               </li>
               <li>
                 Telefon:
-                <strong class="scnd text-white">+998-(67)-226-3533  </strong>
+                <strong class="scnd text-white"
+                  ><a href="tel:+998 67 236 35 33"
+                    >+998 67 236 35 33</a
+                  >
+                </strong>
               </li>
             </ul>
           </div>
@@ -152,7 +157,9 @@
             <ul>
               <li>Bizni kuzatib boring:</li>
               <li>
-                <a href="#" title=""><i class="fa fa-telegram"></i></a>
+                <a target="_blank" href="https://t.me/fromzero_uz" title=""
+                  ><i class="fa fa-telegram"></i
+                ></a>
               </li>
               <!-- <li>
                 <a href="#" title=""><i class="fa fa-facebook"></i></a>
@@ -237,140 +244,84 @@
   </section>
 
   <section>
-    <div class="block remove-btm-gap">
-      <div class="container">
-        <div class="title-sm">
-          <h3>bizning ixtisoslashuvimiz</h3>
+    <div class="container3">
+      <div class="block">
+        <div class="our-projects-counter">
+          <ul>
+            <li>
+              <h2 class="counter">2012</h2>
+              <h4>Barpo etilgan yili</h4>
+            </li>
+            <li>
+              <h2 class="counter">11</h2>
+              <h4>Loyiha</h4>
+            </li>
+            <li>
+              <h2 class="counter">266</h2>
+              <h4>Sotilgan xonadonlar</h4>
+            </li>
+          </ul>
         </div>
-        <!-- title-sm end-->
-        <div class="specialization-data">
-          <div class="specialization">
-            <div class="spec-details">
-              <div class="row">
-                <div class="col-lg-8">
-                  <div class="spec-img">
-                    <figure>
-                      <img
-                        src="https://martech.org/wp-content/uploads/2015/01/building-blocks-wall-ss-1920.jpg"
-                        alt=""
-                      />
-                    </figure>
-                  </div>
-                  <!--spec-img end-->
-                </div>
-                <div class="col-lg-4">
-                  <div class="spec-text right-bdr right">
-                    <h3>Qurilish</h3>
-                    <p>
-                      Har bir loyiha uchun biz sizning loyihangiz uchun
-                      qo'shimcha qiymat yaratishga yordam berishini biladigan
-                      hamkorlar bilan aloqalar o'rnatamiz...
-                    </p>
-                  </div>
-                  <!--spec-text end-->
-                </div>
-              </div>
-            </div>
-            <!--spec-details end-->
-          </div>
-          <!--specialization end-->
-          <div class="specialization style2">
-            <div class="spec-details">
-              <div class="row">
-                <div class="col-lg-5">
-                  <div class="spec-text bfr ep-icon">
-                    <h3>Ta'mirlash</h3>
-                    <p>
-                      Loyihalarni amalga oshirish usuli bir-birini
-                      mustahkamlaydigan qadriyatlarni doimiy ravishda qo'llashga
-                      asoslanadi...
-                    </p>
-                  </div>
-                  <!--spec-text end-->
-                </div>
-                <div class="col-lg-7">
-                  <div class="spec-img">
-                    <figure>
-                      <img
-                        src="https://717design.com/wp-content/uploads/2017/06/lylecharles3-752x440.jpg"
-                        alt=""
-                      />
-                    </figure>
-                  </div>
-                  <!--spec-img end-->
-                </div>
-              </div>
-            </div>
-            <!--spec-details end-->
-          </div>
-          <!--specialization end-->
-          <div class="specialization style3">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="spec-img">
-                  <figure>
-                    <img src="http://via.placeholder.com/392x620" alt="" />
-                  </figure>
-                </div>
-                <!--spec-img end-->
-              </div>
-              <div class="col-lg-6">
-                <div class="spec-text right-bdr left ep-icon bt">
-                  <h3>Ichki va tashqi</h3>
-                  <p>
-                    Har bir loyiha uchun biz sizning loyihangiz uchun qo'shimcha
-                    qiymat yaratishga yordam berishini biladigan hamkorlar bilan
-                    aloqalar o'rnatamiz. Davlat va xususiy sektorni
-                    birlashtirish bilan bir qatorda, biz bilim to'plash va
-                    bir-birimizdan o'rganish uchun sohalarni qamrab oluvchi
-                    aloqalarni o'rnatamiz. Loyihalarni amalga oshirish usuli
-                    doimiy ariza berishga asoslanadi.
-                  </p>
-                </div>
-                <!--spec-text end-->
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--specialization-data end-->
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="block remove-btm-gap">
-      <div class="title-sm">
-        <h3>Bizning Loyihalar</h3>
-      </div>
-      <!--title-sm end-->
-      <div class="house-imgs-slides style2 no-pd">
-        <div class="house-slider style2">
-          {% for i in our_works %}
-          <div class="house-slide">
-            <img src="{{ i.photo.url }}" alt="" height="1000px" style="object-fit: cover;" />
-            <div class="hs-info">
-              <div class="container">
-                <h3>{{ i.title }}</h3>
-                <a href="{% url 'work_details' i.id %}"
-                  >Batafsil <i class="bi bi-chevron-double-right"></i
-                ></a>
-              </div>
-            </div>
-            <!--hs-info end-->
-          </div>
-          <!--house-slide end-->
-          {% endfor %}
-        </div>
-        <!--house-slider end-->
-      </div>
-      <!--house-imgs-slides end-->
-    </div>
-    <div class="load-more-items mb-5">
-      <a href="{% url 'works' %}" title="">Boshqa loyihalarimiz</a>
-    </div>
-    <!--load-more-items end-->
-  </section>
 
 </main>
+<section >
+  <div class="block" id="our_works">
+    <div class="portfolio-sec">
+      <div  class="title-sm">
+        <h2 style="color: white;
+        font-weight: bold;">Loyihalar</h2>
+      </div>
+      <div class="container">
+        <div class="portfolio-items-filter">
+  
+          <div class="portfolio-grid">
+            <div class="row">
+              <div class="masonary style2">
+                <div class="d-flex flex-wrap">
+                  {% for i in our_works %}
+                  <a href="{% url 'work_details' pk=i.id %}">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="portfolio-item">
+                      <div class="pt-img">
+                        <img src="/media/{{i.photo}}" alt="">
+                      </div>
+                      <div class="item-info">
+                        <span>Residentials</span>
+                        <h3><a href="{% url 'work_details' pk=i.id %}" title="">{{i.title}}</a></h3>
+                      </div>
+                    </div><!--portfolio-item end-->
+                  </div>
+                  </a>
+                 
+                  
+                  {%  endfor %}
+                </div>
+              </div><!--masonary end-->
+              <div class="load-more-items mb-5">
+                <a href="{% url 'works' %}" title="">Boshqa loyihalarimiz</a>
+              </div>
+            </div>
+          </div><!--portfolio-grid end-->
+        </div><!--portfolio-items-filter end-->
+      </div>
+    </div><!--portfolio-sec end-->
+  </div>
+</section>
+
+{% endblock %} 
+
+{% block javascript %}
+<script src="{% static 'js/jquery.counterup.js' %}"></script>
+<script src="{% static 'js/waypoints.js' %}"></script>
+<script>
+  $(".counter").counterUp({
+    delay: 5,
+    time: 1000,
+  });
+</script>
 
 {% endblock %}

@@ -1,6 +1,6 @@
 <header class="pb stick">
   <div class="hd_bar">
-    <div class="container">
+    <div style="margin: 0 10%;" class="">
       <div class="header-bar">
         <div class="logo">
           <a href="\" title=""
@@ -11,25 +11,30 @@
         <nav>
           <ul>
             <li>
-              <a class="{{home}}" href="\" title="">Kompaniya Haqida</a>
+              <a class="{{home}}" href="\" title=""
+                >Bosh sahifa</a
+              >
+            </li>
+            <li>
+              <a class="{{about_company}}" href="{% url 'about_company' %}" title="">Kompaniya Haqida</a>
               <ul>
                 <li>
-                  <a href="{% url 'about_company' %}" title=""
+                  <a class="{{a_company}}" href="{% url 'about_company' %}" title=""
                     >Kompaniya Haqida</a
                   >
                 </li>
                 <li>
-                  <a href="{% url 'mission' %}" title=""
+                  <a class="{{mission}}" href="{% url 'mission' %}" title=""
                     >Missiya va qadriyatlar</a
                   >
                 </li>
                 <li>
-                  <a href="{% url 'about' %}" title="">Nega aynan From Zero</a>
+                  <a class="{{why}}"  href="{% url 'about' %}" title="">Nega aynan From Zero</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a class="{{works}}" href="{% url 'works' %}" title=""
+              <a class="{{works}}" href="#our_works" title=""
                 >Loyihalar</a
               >
               <ul>
@@ -37,7 +42,7 @@
                 <li>
                   <a href="{% url 'work_details' i.id %}" title=""
                     >{{i.title}}</a
-                  >
+                  > 
                 </li>
                 {% endfor %}
               </ul>
@@ -45,7 +50,17 @@
 
             <li>
               <a class="{{contact}}" href="{% url 'contact' %}" title=""
+                >Xizmatlar </a
+              >
+            </li>
+            <li>
+              <a class="{{contact}}" href="{% url 'contact' %}" title=""
                 >Aloqa uchun</a
+              >
+            </li>
+            <li style="margin-right:auto;">
+              <a  class="{{contact}}" href="{% url 'contact' %}" title=""
+                >+998972666255</a
               >
             </li>
           </ul>
@@ -62,6 +77,7 @@
             <li><a href="#" title="">En</a></li>
           </ul>
         </div>
+
         <!--select-language end-->
       </div>
       <!--header-bar end-->

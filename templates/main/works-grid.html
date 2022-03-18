@@ -24,10 +24,6 @@
               class="option-set filters-nav"
               data-option-key="filter"
             >
-              <li><a class="selected" data-option-value="*">All</a></li>
-              {% for i in categories %}
-              <li><a data-option-value=".{{i.id}}">{{i.title}}</a></li>
-              {% endfor %}
             </ul>
           </div>
         </section>
@@ -36,7 +32,7 @@
             <div class="masonary style2">
               {% for project in projects %}
               <div
-                class="col-lg-4 col-md-4 col-sm-6 col-xs-12 {{project.category.id}}"
+                class="col-lg-4 col-md-4 col-sm-6 col-xs-12"
               >
                 <div class="portfolio-item">
                   <div class="pt-img">
