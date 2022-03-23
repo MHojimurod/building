@@ -8,6 +8,20 @@ from django.core.paginator import Paginator
 def home(request):
     our_works = OurWorks.objects.all().order_by('-created_at')[:10]
     banner = Banner.objects.order_by("-id").all().first()
+    if request.method == "POST":
+        name = request.POST["name"]
+        email = request.POST["email"]
+        subject = request.POST["subject"]
+        description = request.POST["description"]
+        contact = ContactForm.objects.create(
+            name=name,
+            email=email,
+            subject=subject,
+            description=description
+        )
+        contact.save()
+        messages.success(request, "Rahmat so'rovingiz qabul qilindi. Biz sizga tez orada aloqaga chiqamiz !")
+        return redirect("/")
     ctx = {
         "home":"active",
         "our_works": our_works,
@@ -29,7 +43,7 @@ def contact(request):
             description=description
         )
         contact.save()
-        messages.success(request, "Rahmat qabul qilindi. Biz sizga tez orada aloqaga chiqamiz !")
+        messages.success(request, "Rahmat so'rovingiz qabul qilindi. Biz sizga tez orada aloqaga chiqamiz !")
         return redirect("contact")
     ctx = {
         "contact":"active"

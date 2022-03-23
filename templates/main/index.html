@@ -132,6 +132,7 @@
         </ul>
       </div>
     </div>
+    {% include 'messages.html' %}
     <!--Revolution Slider end-->
     <div class="cntct-info">
       <div class="container">
@@ -269,13 +270,13 @@
 
 </main>
 <section >
-  <div class="block" id="our_works">
+  <div class="" id="our_works">
     <div class="portfolio-sec">
       <div  class="title-sm">
         <h2 style="color: white;
         font-weight: bold;">Loyihalar</h2>
       </div>
-      <div class="container">
+      <div class="container3">
         <div class="portfolio-items-filter">
   
           <div class="portfolio-grid">
@@ -290,10 +291,9 @@
                         <img src="/media/{{i.photo}}" alt="">
                       </div>
                       <div class="item-info">
-                        <span>Residentials</span>
                         <h3><a href="{% url 'work_details' pk=i.id %}" title="">{{i.title}}</a></h3>
                       </div>
-                    </div><!--portfolio-item end-->
+                    </div>
                   </div>
                   </a>
                  
@@ -312,9 +312,178 @@
   </div>
 </section>
 
+<section>
+  <div class="portfolio-sec">
+    <div class="container3">
+      <div class="our-info-details">
+        <div class="row">
+         
+          <div class="title-sm">
+
+            <h2 style="font-weight: bold; color: #fff;" >Kompaniya haqida</h2>
+          </div>
+            <div class="container3">
+              <p style="color: #fff;"><span style="color: #ffa800;">♦</span>   From Zero — O‘zbekistonda ko‘chmas mulk qurilishi sohasida faol ish olib boruvchi kompaniya. Faoliyatining asosiy yo‘nalishi ko‘pxonadonli uylar va shunga mos ijtimoiy infratuzilmani o‘z ichiga oluvchi uy-joy loyihalarini rivojlantirishdan iborat. Turar-joy majmualari individual me‘moriy konsepsiya bo‘yicha quriladi va turlicha daromadga ega keng auditoriya uchun mo‘ljallanadi.</p><br>
+
+              <p style="color: #fff;"><span style="color: #ffa800;">♦</span>   Biz developerlar sifatida binoni barpo etish jarayonining barcha bosqichlarida qatnashamiz: ob‘ektni loyihalashtirish, eski binolarni sotib olish, kelgusida ularni buzish va yangilarini qurish, sifatni nazorat qilish, sotish, shuningdek sotilgandan keyingi xizmatlarni ko‘rsatish.</p><br>
+              <p style="color: #fff;"><span style="color: #ffa800;">♦</span>   Bunday loyihalar boshqaruvi menejmentga taalluqli bo‘lib, bu kabi mashg‘ulotlar bilan shug‘ullanuvchi insonlar ko‘chmas mulk bozorini juda yaxshi bilishlari va unga diqqatlarini jalb qilgan bo‘lishlari lozim. Sababi faoliyatning bu turida yuqori daraja va sifatga erishish uchun muayyan bilim, malaka va tajriba talab etiladi. Muddatlar, xarajat va bajarilgan ish sifatining eng maqbul mutanosibligiga erishish developerning birinchi darajali vazifasi bo‘lib hisoblanadi.</p><br>
+              
+              <p style="color: #fff;"><span style="color: #ffa800;">♦</span>   Quruvchilikka bo‘lgan mehr va ishtiyoq orqali birlashgan o‘zishining yosh va g‘ayratli ustalardan iborat yangi menejment jamoasini shakllantirib, biz bundan keyin ham bozor talablariga javob beruvchi yangi loyihalarni faxr bilan rivojlantirib borish uchun qat‘iyatga to‘ldik.
+              </p><br>
+
+              <p style="color: #fff;"><span style="color: #ffa800;">♦</span>   Biz o‘zimizni Vatanimizning jonkuyar farzandlari deb bilamiz va uning ravnaqiga o‘z hissamizni qo‘ldan kelganicha qo‘shishga harakat qilib yashaymiz!</p>
+              
+            </div><!--who-we-are end-->
+        </div>
+      </div><!--our-info3 end-->
+    </div>
+  </div>
+</section>
+
+<section>
+    <div class="title-sm">
+      <h2 style="color: #ffffff; font-weight: bold;">Missiya va qadriyatlar</h2>
+      </div>
+      <div class="container3">
+      
+      <div class="portfolio-sec">
+        <div class="our-features">
+          <div class="feature-icon">
+            <i class="fa fa-industry" aria-hidden="true"></i>
+          </div>
+          <!--feature-icon end-->
+          <div class="feature-info">
+            <h3>Kasbiy missiyamiz</h3>
+            <p>
+              Albatta, foyda bu har qanday biznes uchun muhim muvaffaqiyat
+              omili hisoblanadi. Ammo bundan mustasno bo’lgan, bizni ulkan
+              marralar sari yetaklovchi yanada muhimroq maqsadlar bor,
+              bular:<br />
+  
+              - Mamlakatimiz va umuman olamni chiroyli va ko’rkam binolar
+              bilan, bog’lar va uylar bilan bezatish; <br />
+              - Insonlarni qulay, mustahkam uylar va idoda binolari bilan
+              taminlash orqali baxtni yanada ortirish; <br />
+              - Atrofimizdagilar bilan o’z professional tajribamiz bilan
+              bo’lishish va ularga munosib namuna bo’lish;
+            </p>
+          </div>
+          <!--feature-info end-->
+        </div>
+        <!--our-features end-->
+        <div class="our-features">
+          <div class="feature-icon">
+            <i class="fa fa-building-o" aria-hidden="true"></i>
+          </div>
+          <!--feature-icon end-->
+          <div class="feature-info">
+            <h3>Ijtimoiy missiyamiz</h3>
+            <p>
+              - Insonlarga hayotda o’z yo’lini topishda ko’maklashish,
+              ijtimoiy loyihalarni qo’llab quvatlashga doimo tayyormiz;<br />
+              - Insonlarni yanada ko’proq yutiqlarga erishishi
+              tarafdorimiz, chunki bizning muvaffaqiyatimiz aynan jamiyat
+              muvaffaqiyatiga uzviy bog’likligiga ishonamiz; <br />
+              - Ma’rifiy, sog’likni saqlash va boshqa ijtimoiy loyihalarni
+              amalga oshirishda ishtiyoq bilan yondashamiz;
+            </p>
+          </div>
+          <!--feature-info end-->
+        </div>
+        <!--our-features end-->
+        <div class="our-features">
+          <div class="feature-icon">
+            <i class="fa fa-xing" aria-hidden="true"></i>
+          </div>
+          <!--feature-icon end-->
+          <div class="feature-info">
+            <h3>Qadriyatlar</h3>
+            <p>
+              - Adolatli almashinuv – doimiy muvaffaqiyat garovi;<br />
+              - Insonlar, siz bilan qanday munosabatda bo’lishini
+              xohlasangiz, siz ham ular bilan huddi shunday munosabatda
+              bo’ling;<br />
+              - Boshqa insonlarning tashvishi bilan yashayotgan shaxs (yoki
+              kompaniya), muvaffaqiyatga erishishda boshqalarni nisbatan
+              imkoniyatini ko’proq bo’lin, o’ziga eng ijobiy narsalarni
+              jalb qiladi;<br>
+    - Halol mehnat baxt keltirar; Va boshqa ko’plab
+              qadriyatlarga rioya qilishga harakat qilamiz.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section>
+  <div class="container3">
+  <div class="block d-flex">
+    <div class="col-6">
+      <div class="contact-form-sec">
+        <h3>Savolingiz bormi? Biz bilan bog'laning</h3>
+        <p
+          class="success alert alert-success"
+          id="success"
+          style="display: none"
+        ></p>
+        <p
+          class="error alert alert-danger"
+          id="error"
+          style="display: none"
+        ></p>
+        <form name="contact_form_3" id="contact_form_3" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="axn" value="contact_3" />
+          <div class="row">
+            <div class="col-lg-12">
+              <input type="text" required name="name" id="name" placeholder="Ism*" />
+            </div>
+            <div class="col-lg-12">
+              <input type="text" name="email" id="email" placeholder="Elektron pochta(ixtiyoriy)" />
+            </div>
+            <div class="col-lg-12">
+              <input
+                type="text"
+                name="subject" required
+                placeholder="Telefon raqam* +998(__)___-__-__"
+              />
+            </div>
+            <div class="col-lg-12">
+              <textarea
+                name="description"
+                id="description" required
+                placeholder="Xabar*"
+              ></textarea>
+            </div>
+            <div class="col-lg-12 text-center">
+              <button type="submit" id="submit_3">Yuborish</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-6">
+      <iframe
+      style="height: 100% !important; width: 100%"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d758.4944707457468!2d68.76609172924795!3d40.497872118526146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b207b88f926fef%3A0x53f39779cb628b0d!2sFrom%20Zero!5e0!3m2!1sru!2s!4v1646744474518!5m2!1sru!2s"
+      style="border: 0"
+      allowfullscreen="true"
+      loading="lazy"
+    ></iframe>
+    </div>
+  </div>
+  </div>
+</section>
+
 {% endblock %} 
 
 {% block javascript %}
+<script>
+  setTimeout(function () {
+    $("#message").fadeOut("slow");
+  }, 3000);
+</script>
 <script src="{% static 'js/jquery.counterup.js' %}"></script>
 <script src="{% static 'js/waypoints.js' %}"></script>
 <script>

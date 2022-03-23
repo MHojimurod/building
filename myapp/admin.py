@@ -1,10 +1,20 @@
+import re
 from django.contrib import admin
 
 from myapp.models import ContactForm, News, OurWorks, WorkImages, Banner
+from django.contrib.auth.models import Group
+
+
+admin.site.unregister(Group)
+
 
 @admin.register(ContactForm)
 class ContactFormAdmin(admin.ModelAdmin):
-    list_display = ("name", "email", "created_at")
+    list_display = ("name", "subject","email", "created_at")
+    def has_add_permission(self, request):
+        return False
+    def has_change_permission(self, request, obj=None):
+        return False
 
 
 @admin.register(News)
