@@ -201,6 +201,7 @@
                 // px value of it. let's use an estimated px for now
                 clock_box.style.left = findPosX(clock_link) - 110 + 'px';
             }
+            alert
             clock_box.style.top = Math.max(0, findPosY(clock_link) - 30) + 'px';
 
             // Show the clock box

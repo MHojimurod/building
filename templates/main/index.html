@@ -106,7 +106,7 @@
               data-x="center"
               data-hoffset="0"
               data-y="center"
-              data-voffset="-200"
+              data-voffset="-355"
               data-width="['auto']"
               data-height="['auto']"
               data-type="text"
@@ -122,7 +122,7 @@
               data-elementdelay="0.04"
             >
               {{banner.title|safe}}
-              <!-- “ Biz qurgan yaxshi narsalar <br />
+              <!-- “  yaxshi narsalar <br />
               oxir-oqibat bizni quradi ” -->
             </div>
 
@@ -282,27 +282,43 @@
           <div class="portfolio-grid">
             <div class="row">
               <div class="masonary style2">
-                <div class="d-flex flex-wrap">
+                <div class="d-flex flex-wrap" id="slider">
                   {% for i in our_works %}
-                  <a href="{% url 'work_details' pk=i.id %}">
+                    <!-- <a class="hello" href="{% url 'work_details' pk=i.id %}"> -->
+                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 view_more" onclick="location.href='{% url 'work_details' pk=i.id %}'" >
+                      <div class="portfolio-item">
+                        <div class="pt-img">
+                          <img src="/media/{{i.photo}}" alt="">
+                        </div>
+                        <div class="item-info">
+                          <h3>
+                            <a href="{% url 'work_details' pk=i.id %}" title="">{{i.title}}</a>
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                  <!-- </a> -->
+
+                  <!-- <div class="hello" onclick="location.href='{% url 'work_details' pk=i.id %}'">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="portfolio-item">
                       <div class="pt-img">
                         <img src="/media/{{i.photo}}" alt="">
                       </div>
                       <div class="item-info">
-                        <h3><a href="{% url 'work_details' pk=i.id %}" title="">{{i.title}}</a></h3>
+                        <h3>
+                          <a href="{% url 'work_details' pk=i.id %}" title="">{{i.title}}</a>
+                        </h3>
                       </div>
                     </div>
                   </div>
-                  </a>
-                 
-                  
+                </div> -->
+                    
                   {%  endfor %}
                 </div>
               </div><!--masonary end-->
               <div class="load-more-items mb-5">
-                <a href="{% url 'works' %}" title="">Boshqa loyihalarimiz</a>
+                <a href="javascript:void(0)" id="more" title=""  >Ko'proq ko'rsatish</a>
               </div>
             </div>
           </div><!--portfolio-grid end-->
@@ -326,10 +342,7 @@
               <p style="color: #fff;"><span style="color: #ffa800;">♦</span>   From Zero — O‘zbekistonda ko‘chmas mulk qurilishi sohasida faol ish olib boruvchi kompaniya. Faoliyatining asosiy yo‘nalishi ko‘pxonadonli uylar va shunga mos ijtimoiy infratuzilmani o‘z ichiga oluvchi uy-joy loyihalarini rivojlantirishdan iborat. Turar-joy majmualari individual me‘moriy konsepsiya bo‘yicha quriladi va turlicha daromadga ega keng auditoriya uchun mo‘ljallanadi.</p><br>
 
               <p style="color: #fff;"><span style="color: #ffa800;">♦</span>   Biz developerlar sifatida binoni barpo etish jarayonining barcha bosqichlarida qatnashamiz: ob‘ektni loyihalashtirish, eski binolarni sotib olish, kelgusida ularni buzish va yangilarini qurish, sifatni nazorat qilish, sotish, shuningdek sotilgandan keyingi xizmatlarni ko‘rsatish.</p><br>
-              <p style="color: #fff;"><span style="color: #ffa800;">♦</span>   Bunday loyihalar boshqaruvi menejmentga taalluqli bo‘lib, bu kabi mashg‘ulotlar bilan shug‘ullanuvchi insonlar ko‘chmas mulk bozorini juda yaxshi bilishlari va unga diqqatlarini jalb qilgan bo‘lishlari lozim. Sababi faoliyatning bu turida yuqori daraja va sifatga erishish uchun muayyan bilim, malaka va tajriba talab etiladi. Muddatlar, xarajat va bajarilgan ish sifatining eng maqbul mutanosibligiga erishish developerning birinchi darajali vazifasi bo‘lib hisoblanadi.</p><br>
               
-              <p style="color: #fff;"><span style="color: #ffa800;">♦</span>   Quruvchilikka bo‘lgan mehr va ishtiyoq orqali birlashgan o‘zishining yosh va g‘ayratli ustalardan iborat yangi menejment jamoasini shakllantirib, biz bundan keyin ham bozor talablariga javob beruvchi yangi loyihalarni faxr bilan rivojlantirib borish uchun qat‘iyatga to‘ldik.
-              </p><br>
 
               <p style="color: #fff;"><span style="color: #ffa800;">♦</span>   Biz o‘zimizni Vatanimizning jonkuyar farzandlari deb bilamiz va uning ravnaqiga o‘z hissamizni qo‘ldan kelganicha qo‘shishga harakat qilib yashaymiz!</p>
               
@@ -418,8 +431,8 @@
 
 <section>
   <div class="container3">
-  <div class="block d-flex">
-    <div class="col-6">
+  <div class="block d-flex dddd">
+    <div class="col-lg-6 col-12 mb-1">
       <div class="contact-form-sec">
         <h3>Savolingiz bormi? Biz bilan bog'laning</h3>
         <p
@@ -463,7 +476,7 @@
         </form>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-lg-6 col-12 mb-1">
       <iframe
       style="height: 100% !important; width: 100%"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d758.4944707457468!2d68.76609172924795!3d40.497872118526146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b207b88f926fef%3A0x53f39779cb628b0d!2sFrom%20Zero!5e0!3m2!1sru!2s!4v1646744474518!5m2!1sru!2s"
@@ -492,5 +505,47 @@
     time: 1000,
   });
 </script>
+
+
+
+<script>
+
+  $("#projects_link").click(
+
+    () => {
+      $("#loyihalar_ul").hide();
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $("#our_works").offset().top - 200
+    }, 1000)
+
+    }
+  )
+</script>
+
+<script>
+  const indexing = 4;
+  $(
+    () => {
+      $(".view_more").slice(indexing).css("display", "none");
+
+    }
+    
+  )
+  $("#more").click(() => {
+    let x = $(".view_more[style*='display: none']").slice(0, indexing)
+    x.css("display", "block");
+
+    $([document.documentElement, document.body]).animate({
+        scrollTop: x.offset().top - 200
+    }, 800, () => {
+      if ($(".view_more[style*='display: none']").length == 0) {
+      // $("#more").hide();
+    }
+    });
+
+
+  })
+</script>
+
 
 {% endblock %}

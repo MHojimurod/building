@@ -344,12 +344,12 @@ div.pb {
 }
 .logo {
 	float: left;
-	width: 22%;
+	width: 10%;
 	padding-top: 15px;
 }
 nav {
 	float: left;
-	width: 60%;
+	/* width: 60%; */
 }
 nav ul {
 	margin: 0;	
@@ -540,7 +540,7 @@ header.full .logo {
 	display: none;
 	text-align: right;
 	position: relative;
-	top: 2px;
+	top: 11px;
 }
 .mobile-menu-btn a {
 	font-size: 28px;

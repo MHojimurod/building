@@ -150,6 +150,7 @@
 	.our-specifications {padding: 0 50px;}
 }	
 @media (max-width: 991px) {
+	.dddd {flex-direction: column;}
 	main:before {display: none;}
 	.ep-icon:after {display: none;}
 	header.full.sticky {padding: 25px 0;}
@@ -168,7 +169,7 @@
 	.mobile-menu-btn {display: block;}
 	nav {display: none;}
 	.select-language {width: 30%;padding: 0;padding-right: 25px;padding-top: 6px;}
-	.logo {padding: 0;padding-top: 3px;}
+	.logo {padding: 0;padding: 5px 0px;}
 	.posts-sec.st3 .post-details h3 {height: auto;}
 	.posts-sec.st3 .post {border: 0;border-bottom: 0;}
 	.header-bar {padding: 20px 30px;}
@@ -316,6 +317,7 @@
 	.pd-left-none {padding-right: 0;}
 }
 @media (max-width: 767px) {
+	.dddd {flex-direction: column;}
 	.header-bar.qut-style .logo {padding-top: 4px;}
 	.our-specifications {padding: 0 20px;}
 	.block.no-padding.pd-rs {padding-top: 80px;}
@@ -446,10 +448,11 @@
 	.demos-imgs {padding: 0;}
 }
 @media (max-width: 576px) {
+	.dddd {flex-direction: column;}
 	.tp-bullets {left: 107% !important;}
 	.tp-bullets {top: 30% !important;}
 	header.full.pb {padding: 20px 0;}
-	.logo {padding-top: 2px;}
+	.logo {padding: 3px 0px;}
 	.footer-data.prxl.more-top-pd {padding: 120px 0; }
 	.news-listing {padding: 0 15px;}
 	header.pb.white {background: #25292f; }
@@ -656,4 +659,6 @@
 
 @media (max-width: 400px) {
 	.company-properties {bottom: 5px;padding: 0 15px}
+	
+	.dddd {flex-direction: column;}
 }

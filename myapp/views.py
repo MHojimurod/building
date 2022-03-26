@@ -6,7 +6,7 @@ from django.core.paginator import Paginator
 
 # Create your views here.
 def home(request):
-    our_works = OurWorks.objects.all().order_by('-created_at')[:10]
+    our_works = OurWorks.objects.all()
     banner = Banner.objects.order_by("-id").all().first()
     if request.method == "POST":
         name = request.POST["name"]

@@ -1,7 +1,7 @@
-<header class="pb stick">
+<header class="sticky animated slideInDown">
   <div class="hd_bar">
     <div style="margin: 0 10%;" class="">
-      <div class="header-bar">
+      <div class="container3">
         <div class="logo">
           <a href="\" title=""
             ><img style="width: 74px" src="/static/images/logo.png" alt=""
@@ -34,10 +34,10 @@
               </ul>
             </li>
             <li>
-              <a class="{{works}}" href="#our_works" title=""
+              <a class="{{works}}" href="javascript:void(0)" title="" id="projects_link"
                 >Loyihalar</a
               >
-              <ul>
+              <ul id="loyihalar_ul">
                 {% for i in projects %}
                 <li>
                   <a href="{% url 'work_details' i.id %}" title=""
@@ -81,7 +81,7 @@
               >
             </li>
             <li style="margin-right:auto;">
-              <a href="tel:+998672363533" title=""
+              <a style="font-size: 200%;" href="tel:+998672363533" title=""
                 >+998 67 236 35 33</a
               >
             </li>
@@ -89,16 +89,17 @@
         </nav>
         <!--nav end-->
         <div class="mobile-menu-btn">
+          <a style="font-size: 20px; margin-right: 8vw;" href="">+998972666255</a>
           <a href="#" title="" class="open-menu"><i class="fa fa-bars"></i></a>
         </div>
         <!--mobile-menu-btn end-->
 
-        <div class="select-language">
+        <!-- <div class="select-language">
           <ul>
             <li class="active"><a href="#" title="">Uz</a></li>
             <li><a href="#" title="">En</a></li>
           </ul>
-        </div>
+        </div> -->
 
         <!--select-language end-->
       </div>
